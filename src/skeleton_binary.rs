@@ -26,7 +26,7 @@ pub struct SkeletonBinary {
     scale: f32
 }
 
-impl With<TextureAtlas> for SkeletonBinary {
+impl SkeletonBinary {
     fn new(atlas: TextureAtlas) -> SkeletonBinary {
         SkeletonBinary {
             attachment_loader: AtlasAttachmentLoader::new(atlas),
