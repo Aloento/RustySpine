@@ -47,6 +47,19 @@ impl SkeletonInput {
         };
     }
 
+    pub fn read_native_int(&mut self) -> i32 {
+        let ch1 = self.read_byte();
+        let ch2 = self.read_byte();
+        let ch3 = self.read_byte();
+        let ch4 = self.read_byte();
+        return (ch1 << 24) + (ch2 << 16) + (ch3 << 8) + (ch4 << 0);
+    }
+
+    pub fn read_float(&mut self) -> f32 {
+        let i = self.read_native_int();
+        f64::from(i) as f32
+    }
+
     pub fn read_string_ref(&mut self) -> *const String {
         let index = self.read_int(true) as usize;
         let empty = String::new();
