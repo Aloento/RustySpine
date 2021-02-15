@@ -1,3 +1,1 @@
-pub struct BoundingBoxAttachment {
-
-}
+pub struct BoundingBoxAttachment {}

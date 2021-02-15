@@ -1,3 +1,1 @@
-pub struct PointAttachment {
-
-}
+pub struct PointAttachment {}

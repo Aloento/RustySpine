@@ -1,10 +1,10 @@
-use crate::attachments::mesh_attachment::MeshAttachment;
-use crate::utils::color::Color;
+use crate::attachments::atlas_attachment_loader::AtlasAttachmentLoader;
 use crate::attachments::attachment_loader::AttachmentLoader;
+use crate::attachments::mesh_attachment::MeshAttachment;
+use crate::skeleton_data::SkeletonData;
+use crate::utils::color::Color;
 use crate::utils::linked_mesh::LinkedMesh;
 use crate::utils::texture_atlas::TextureAtlas;
-use crate::attachments::atlas_attachment_loader::AtlasAttachmentLoader;
-use crate::skeleton_data::SkeletonData;
 
 const BONE_ROTATE: u8 = 0;
 const BONE_TRANSLATE: u8 = 1;
@@ -24,7 +24,7 @@ const TEMP_COLOR2: Color = Color::default();
 pub struct SkeletonBinary {
     attachment_loader: Box<dyn AttachmentLoader>,
     linked_meshes: Vec<LinkedMesh>,
-    scale: f32
+    scale: f32,
 }
 
 impl SkeletonBinary {
@@ -32,13 +32,11 @@ impl SkeletonBinary {
         SkeletonBinary {
             attachment_loader: Box::new(AtlasAttachmentLoader::new(atlas)),
             linked_meshes: vec![],
-            scale: 1.0
+            scale: 1.0,
         }
     }
 
     pub fn read_skeleton_data(file: String) -> SkeletonData {
-        return SkeletonData {
-
-        }
+        return SkeletonData {};
     }
 }

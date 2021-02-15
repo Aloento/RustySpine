@@ -1,3 +1,1 @@
-pub struct ClippingAttachment {
-
-}
+pub struct ClippingAttachment {}

@@ -1,4 +1,3 @@
-use std::ptr::null;
 use std::vec::IntoIter;
 
 pub struct SkeletonInput {
@@ -17,14 +16,10 @@ impl SkeletonInput {
     }
 
     pub fn read_byte(&mut self) -> i32 {
-        return self.buffer.next().unwrap() as i32
+        return self.buffer.next().unwrap() as i32;
     }
 
-    pub fn read_int() -> i32 {
+    pub fn read_int() -> i32 {}
 
-    }
-
-    pub fn read_string_ref() -> String {
-
-    }
+    pub fn read_string_ref() -> String {}
 }

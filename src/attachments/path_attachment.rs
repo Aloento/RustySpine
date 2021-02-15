@@ -1,3 +1,1 @@
-pub struct PathAttachment {
-
-}
+pub struct PathAttachment {}

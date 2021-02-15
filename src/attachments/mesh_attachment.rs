@@ -1,3 +1,1 @@
-pub struct MeshAttachment {
-
-}
+pub struct MeshAttachment {}

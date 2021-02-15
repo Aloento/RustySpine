@@ -1,11 +1,11 @@
 use crate::attachments::attachment_loader::AttachmentLoader;
-use crate::attachments::mesh_attachment::MeshAttachment;
-use crate::attachments::clipping_attachment::ClippingAttachment;
-use crate::skin::Skin;
-use crate::attachments::point_attachment::PointAttachment;
 use crate::attachments::bounding_box_attachment::BoundingBoxAttachment;
+use crate::attachments::clipping_attachment::ClippingAttachment;
+use crate::attachments::mesh_attachment::MeshAttachment;
 use crate::attachments::path_attachment::PathAttachment;
+use crate::attachments::point_attachment::PointAttachment;
 use crate::attachments::region_attachment::RegionAttachment;
+use crate::skin::Skin;
 use crate::utils::texture_atlas::TextureAtlas;
 
 pub struct AtlasAttachmentLoader {

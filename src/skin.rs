@@ -1,3 +1,1 @@
-pub struct Skin {
-
-}
+pub struct Skin {}

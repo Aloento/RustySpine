@@ -5,18 +5,18 @@ pub struct LinkedMesh {
     skin: String,
     slot_index: i32,
     mesh: MeshAttachment,
-    inherit_deform: bool
+    inherit_deform: bool,
 }
 
 impl LinkedMesh {
     fn new(mesh: MeshAttachment, skin: String, slot_index: i32, parent: String, inherit_deform: bool)
-            -> Self {
+           -> Self {
         LinkedMesh {
             parent,
             skin,
             slot_index,
             mesh,
-            inherit_deform
+            inherit_deform,
         }
     }
 }

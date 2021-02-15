@@ -1,3 +1,1 @@
-pub struct RegionAttachment {
-
-}
+pub struct RegionAttachment {}
