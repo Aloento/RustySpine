@@ -1,6 +1,9 @@
 use crate::attachments::mesh_attachment::MeshAttachment;
 use crate::utils::color::Color;
 use crate::attachments::attachment_loader::AttachmentLoader;
+use crate::utils::linked_mesh::LinkedMesh;
+use crate::utils::texture_atlas::TextureAtlas;
+use crate::attachments::atlas_attachment_loader::AtlasAttachmentLoader;
 
 const BONE_ROTATE: u8 = 0;
 const BONE_TRANSLATE: u8 = 1;
@@ -19,5 +22,16 @@ const TEMP_COLOR2: Color = Color::default();
 
 pub struct SkeletonBinary {
     attachment_loader: dyn AttachmentLoader,
+    linked_meshes: Vec<LinkedMesh>,
+    scale: f32
+}
 
+impl With<TextureAtlas> for SkeletonBinary {
+    fn new(atlas: TextureAtlas) -> SkeletonBinary {
+        SkeletonBinary {
+            attachment_loader: AtlasAttachmentLoader::new(atlas),
+            linked_meshes: vec![],
+            scale: 1.0
+        }
+    }
 }

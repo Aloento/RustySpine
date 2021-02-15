@@ -5,3 +5,4 @@ pub mod bounding_box_attachment;
 pub mod clipping_attachment;
 pub mod path_attachment;
 pub mod point_attachment;
+pub mod atlas_attachment_loader;
