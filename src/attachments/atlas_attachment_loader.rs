@@ -21,27 +21,27 @@ impl AtlasAttachmentLoader {
 }
 
 impl AttachmentLoader for AtlasAttachmentLoader {
-    fn new_region_attachment(skin: Skin, name: String, path: String) -> RegionAttachment {
+    fn new_region_attachment(&self, skin: Skin, name: String, path: String) -> RegionAttachment {
         unimplemented!()
     }
 
-    fn new_mesh_attachment(skin: Skin, name: String, path: String) -> MeshAttachment {
+    fn new_mesh_attachment(&self, skin: Skin, name: String, path: String) -> MeshAttachment {
         unimplemented!()
     }
 
-    fn new_bounding_box_attachment(skin: Skin, name: String) -> BoundingBoxAttachment {
+    fn new_bounding_box_attachment(&self, skin: Skin, name: String) -> BoundingBoxAttachment {
         unimplemented!()
     }
 
-    fn new_clipping_attachment(skin: Skin, name: String) -> ClippingAttachment {
+    fn new_clipping_attachment(&self, skin: Skin, name: String) -> ClippingAttachment {
         unimplemented!()
     }
 
-    fn new_path_attachment(skin: Skin, name: String) -> PathAttachment {
+    fn new_path_attachment(&self, skin: Skin, name: String) -> PathAttachment {
         unimplemented!()
     }
 
-    fn new_point_attachment(skin: Skin, name: String) -> PointAttachment {
+    fn new_point_attachment(&self, skin: Skin, name: String) -> PointAttachment {
         unimplemented!()
     }
 }

@@ -22,7 +22,7 @@ const TEMP_COLOR: Color = Color::default();
 const TEMP_COLOR2: Color = Color::default();
 
 pub struct SkeletonBinary {
-    attachment_loader: dyn AttachmentLoader,
+    attachment_loader: Box<dyn AttachmentLoader>,
     linked_meshes: Vec<LinkedMesh>,
     scale: f32
 }
@@ -30,13 +30,15 @@ pub struct SkeletonBinary {
 impl SkeletonBinary {
     pub fn new(atlas: TextureAtlas) -> SkeletonBinary {
         SkeletonBinary {
-            attachment_loader: AtlasAttachmentLoader::new(atlas),
+            attachment_loader: Box::new(AtlasAttachmentLoader::new(atlas)),
             linked_meshes: vec![],
             scale: 1.0
         }
     }
 
     pub fn read_skeleton_data(file: String) -> SkeletonData {
+        return SkeletonData {
 
+        }
     }
 }

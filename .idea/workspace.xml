@@ -11,7 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Rust">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attachments/atlas_attachment_loader.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/atlas_attachment_loader.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attachments/attachment_loader.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/attachment_loader.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/skeleton_binary.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_binary.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/color.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/color.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/linked_mesh.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/linked_mesh.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/skeleton_input.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/skeleton_input.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +64,22 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Cargo.Test tests::it_works">
+    <configuration name="Test tests::it_works" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package RustySpine --lib tests::it_works -- --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="test --package RustySpine --lib tests" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -95,6 +114,11 @@
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo.Test tests::it_works" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/scoop/apps/rustup/current/.cargo/bin" />
@@ -107,7 +131,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613380697369</updated>
-      <workItem from="1613380699934" duration="14076000" />
+      <workItem from="1613380699934" duration="20492000" />
     </task>
     <task id="LOCAL-00001" summary="Rust">
       <created>1613380844867</created>
@@ -165,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613396799715</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Rust">
+      <created>1613398661013</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613398661013</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

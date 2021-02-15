@@ -8,7 +8,7 @@ pub struct LinkedMesh {
     inherit_deform: bool
 }
 
-impl With<MeshAttachment, String, i32, String, bool> for LinkedMesh {
+impl LinkedMesh {
     fn new(mesh: MeshAttachment, skin: String, slot_index: i32, parent: String, inherit_deform: bool)
             -> Self {
         LinkedMesh {

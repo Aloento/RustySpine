@@ -1,24 +1,23 @@
+use std::ptr::null;
+use std::vec::IntoIter;
+
 pub struct SkeletonInput {
     strings: Vec<String>,
-    chars: [char; 32],
-    buffer: Vec<u8>,
-    index: u32
+    chars: Vec<char>,
+    buffer: IntoIter<u8>,
 }
 
 impl SkeletonInput {
     pub fn new(file: String) -> SkeletonInput {
         SkeletonInput {
             strings: vec![],
-            chars: [char; 32],
-            buffer: std::fs::read(file).unwrap(),
-            index: 0
+            chars: Vec::with_capacity(32),
+            buffer: std::fs::read(file).unwrap().into_iter(),
         }
     }
 
     pub fn read_byte(&mut self) -> i32 {
-        let i = self.buffer.get(self.index).unwrap() as i32;
-        self.index = self.index + 1;
-        return i
+        return self.buffer.next().unwrap() as i32
     }
 
     pub fn read_int() -> i32 {
