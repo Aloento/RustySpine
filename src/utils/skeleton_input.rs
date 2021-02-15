@@ -6,9 +6,8 @@ pub struct SkeletonInput {
 
 impl SkeletonInput {
     pub fn new(file: String) -> SkeletonInput {
-        let buffer = std::fs::read(file).unwrap();
         SkeletonInput {
-            buffer,
+            buffer: std::fs::read(file).unwrap(),
             strings: vec![],
             chars: [char; 32]
         }
