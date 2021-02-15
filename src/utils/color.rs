@@ -6,6 +6,15 @@ pub struct Color {
 }
 
 impl Color {
+    pub fn new() -> Color {
+        Color {
+            r: 0.0,
+            g: 0.0,
+            b: 0.0,
+            a: 0.0
+        }
+    }
+
     pub fn rgba8888to_color (&mut self, value: u32) {
         self.r = ((value & 0xff000000) >> 24) / 255f32;
         self.g = ((value & 0x00ff0000) >> 16) / 255f32;
