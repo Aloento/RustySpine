@@ -1,3 +1,4 @@
+#[derive(Default)]
 pub struct Color {
     r: f32,
     g: f32,
@@ -5,8 +6,8 @@ pub struct Color {
     a: f32
 }
 
-impl Color {
-    pub fn new() -> Color {
+impl Default for Color {
+    fn default() -> Self {
         Color {
             r: 0.0,
             g: 0.0,
@@ -14,7 +15,9 @@ impl Color {
             a: 0.0
         }
     }
+}
 
+impl Color {
     pub fn rgba8888to_color (&mut self, value: u32) {
         self.r = ((value & 0xff000000) >> 24) / 255f32;
         self.g = ((value & 0x00ff0000) >> 16) / 255f32;
