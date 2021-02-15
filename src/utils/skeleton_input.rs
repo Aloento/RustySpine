@@ -1,4 +1,6 @@
+use std::cell::Ref;
 use std::vec::IntoIter;
+use std::fmt::Write;
 
 pub struct SkeletonInput {
     strings: Vec<String>,
@@ -15,11 +17,83 @@ impl SkeletonInput {
         }
     }
 
-    pub fn read_byte(&mut self) -> i32 {
+    fn read_byte(&mut self) -> i32 {
         return self.buffer.next().unwrap() as i32;
     }
 
-    pub fn read_int() -> i32 {}
+    pub fn read_int(&mut self, optimize: bool) -> i32 {
+        let mut b = self.read_byte();
+        let mut result = b & 0x7F;
+        if (b & 0x80) != 0 {
+            b = self.read_byte();
+            result |= (b & 0x7F) << 7;
+            if (b & 0x80) != 0 {
+                b = self.read_byte();
+                result |= (b & 0x7F) << 14;
+                if (b & 0x80) != 0 {
+                    b = self.read_byte();
+                    result |= (b & 0x7F) << 21;
+                    if (b & 0x80) != 0 {
+                        b = self.read_byte();
+                        result |= (b & 0x7F) << 28;
+                    }
+                }
+            }
+        };
+        return if optimize {
+            result
+        } else {
+            (result as u32 >> 1) as i32 ^ -(result & 1)
+        };
+    }
 
-    pub fn read_string_ref() -> String {}
+    pub fn read_string_ref(&mut self) -> &String {
+        let index = self.read_int(true) as usize;
+        return if index == 0 {
+            &String::new()
+        } else {
+            self.strings.get(index).unwrap()
+        };
+    }
+
+    pub fn read_string(&mut self) -> String {
+        let mut byte_count = self.read_int(true) as usize;
+        if byte_count == 0 || byte_count == 1 {
+            return String::new();
+        }
+        byte_count -= 1;
+
+        if self.chars.len() < byte_count {
+            self.chars = Vec::with_capacity(byte_count)
+        }
+
+        let mut char_count = 0 as usize;
+        for mut i in 0..char_count {
+            let mut b = self.read_byte();
+            match b >> 4 {
+                -1 => { panic!("EOFException") }
+                12 | 13=> {
+                    self.chars[char_count] = ((b & 0x1F) << 6 | self.read_byte() & 0x3F) as char;
+                    char_count += 1;
+                    i += 2;
+                }
+                14 => {
+                    self.chars[char_count] = ((b & 0x0F) << 12 | (self.read_byte() & 0x3F) << 6 | self.read_byte() & 0x3F) as char;
+                    char_count += 1;
+                    i += 3;
+                }
+                _ => {
+                    self.chars[char_count] = b as char;
+                    char_count += 1;
+                    i += 1;
+                }
+            }
+        }
+
+        let mut str = String::new();
+        for char in self.chars {
+            str.write_char(char)
+        }
+        return str
+    }
 }
