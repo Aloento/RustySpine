@@ -25,6 +25,7 @@ pub struct SkeletonBinary {
     attachment_loader: Box<dyn AttachmentLoader>,
     linked_meshes: Vec<LinkedMesh>,
     scale: f32,
+    temp_color1:
 }
 
 impl SkeletonBinary {
