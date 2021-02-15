@@ -4,6 +4,8 @@ use crate::attachments::attachment_loader::AttachmentLoader;
 use crate::utils::linked_mesh::LinkedMesh;
 use crate::utils::texture_atlas::TextureAtlas;
 use crate::attachments::atlas_attachment_loader::AtlasAttachmentLoader;
+use std::fs::File;
+use crate::skeleton_data::SkeletonData;
 
 const BONE_ROTATE: u8 = 0;
 const BONE_TRANSLATE: u8 = 1;
@@ -27,11 +29,15 @@ pub struct SkeletonBinary {
 }
 
 impl SkeletonBinary {
-    fn new(atlas: TextureAtlas) -> SkeletonBinary {
+    pub fn new(atlas: TextureAtlas) -> SkeletonBinary {
         SkeletonBinary {
             attachment_loader: AtlasAttachmentLoader::new(atlas),
             linked_meshes: vec![],
             scale: 1.0
         }
+    }
+
+    pub fn read_skeleton_data(file: File) -> SkeletonData {
+        
     }
 }

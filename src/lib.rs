@@ -2,6 +2,7 @@ mod skeleton_binary;
 mod utils;
 mod attachments;
 mod skin;
+mod skeleton_data;
 
 #[cfg(test)]
 mod tests {
