@@ -6,6 +6,7 @@ mod attachments;
 mod skin;
 mod skeleton_data;
 mod bone_data;
+mod slot_data;
 
 #[cfg(test)]
 mod tests {
