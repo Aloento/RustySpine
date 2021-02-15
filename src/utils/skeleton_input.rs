@@ -47,12 +47,13 @@ impl SkeletonInput {
         };
     }
 
-    pub fn read_string_ref(&mut self) -> &String {
+    pub fn read_string_ref(&mut self) -> *const String {
         let index = self.read_int(true) as usize;
+        let empty = String::new();
         return if index == 0 {
-            &String::new()
+            &empty
         } else {
-            self.strings.get(index).unwrap()
+            self.strings.get(index - 1).unwrap()
         };
     }
 
@@ -91,8 +92,8 @@ impl SkeletonInput {
         }
 
         let mut str = String::new();
-        for char in self.chars {
-            str.write_char(char).unwrap()
+        for char in &self.chars {
+            str.write_char(*char).unwrap()
         }
         return str
     }

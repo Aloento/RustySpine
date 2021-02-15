@@ -18,14 +18,13 @@ const PATH_SPACING: u8 = 1;
 const PATH_MIX: u8 = 2;
 const CURVE_STEPPED: u8 = 1;
 const CURVE_BEZIER: u8 = 2;
-const TEMP_COLOR: Color = Color::default();
-const TEMP_COLOR2: Color = Color::default();
 
 pub struct SkeletonBinary {
     attachment_loader: Box<dyn AttachmentLoader>,
     linked_meshes: Vec<LinkedMesh>,
     scale: f32,
-    temp_color1:
+    temp_color1: Color,
+    temp_color2: Color,
 }
 
 impl SkeletonBinary {
@@ -34,6 +33,8 @@ impl SkeletonBinary {
             attachment_loader: Box::new(AtlasAttachmentLoader::new(atlas)),
             linked_meshes: vec![],
             scale: 1.0,
+            temp_color1: Default::default(),
+            temp_color2: Default::default()
         }
     }
 
