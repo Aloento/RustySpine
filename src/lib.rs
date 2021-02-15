@@ -1,4 +1,7 @@
 mod skeleton_binary;
+mod utils;
+mod attachments;
+mod skin;
 
 #[cfg(test)]
 mod tests {
