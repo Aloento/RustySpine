@@ -38,7 +38,9 @@ impl SkeletonBinary {
         }
     }
 
-    pub fn read_skeleton_data(file: String) -> SkeletonData {
-        return SkeletonData {};
+    pub fn read_skeleton_data(&self, file: String) -> SkeletonData {
+        let scale = self.scale;
+        let skeletonData = SkeletonData::new;
+        return skeletonData
     }
 }

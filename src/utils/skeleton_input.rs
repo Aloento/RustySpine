@@ -62,9 +62,9 @@ impl SkeletonInput {
 
     pub fn read_string_ref(&mut self) -> *const String {
         let index = self.read_int(true) as usize;
-        let empty = String::new();
+        // let empty = String::new();
         return if index == 0 {
-            &empty
+            &"".to_string()
         } else {
             self.strings.get(index - 1).unwrap()
         };
