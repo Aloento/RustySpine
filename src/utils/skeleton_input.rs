@@ -73,17 +73,17 @@ impl SkeletonInput {
             match b >> 4 {
                 -1 => { panic!("EOFException") }
                 12 | 13=> {
-                    self.chars[char_count] = ((b & 0x1F) << 6 | self.read_byte() & 0x3F) as char;
+                    self.chars[char_count] = char::from_u32((((b & 0x1F) << 6 | self.read_byte() & 0x3F) as u32)).unwrap();
                     char_count += 1;
                     i += 2;
                 }
                 14 => {
-                    self.chars[char_count] = ((b & 0x0F) << 12 | (self.read_byte() & 0x3F) << 6 | self.read_byte() & 0x3F) as char;
+                    self.chars[char_count] = char::from_u32(((b & 0x0F) << 12 | (self.read_byte() & 0x3F) << 6 | self.read_byte() & 0x3F) as u32).unwrap();
                     char_count += 1;
                     i += 3;
                 }
                 _ => {
-                    self.chars[char_count] = b as char;
+                    self.chars[char_count] = char::from_u32(b as u32).unwrap();
                     char_count += 1;
                     i += 1;
                 }
@@ -92,7 +92,7 @@ impl SkeletonInput {
 
         let mut str = String::new();
         for char in self.chars {
-            str.write_char(char)
+            str.write_char(char).unwrap()
         }
         return str
     }

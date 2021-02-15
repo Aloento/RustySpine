@@ -1,3 +1,4 @@
+#![feature(assoc_char_funcs)]
 mod skeleton_binary;
 mod utils;
 mod attachments;
