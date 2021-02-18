@@ -45,10 +45,10 @@ impl<'m> SkeletonBinary<'m> {
         self.scale = scale;
     }
 
-    pub fn read_skeleton_data(&self, file: String) -> SkeletonData {
-        let scale = self.scale;
-        let skeletonData = SkeletonData::new;
-
-        return skeletonData;
-    }
+    // pub fn read_skeleton_data(&self, file: String) -> SkeletonData {
+    //     let scale = self.scale;
+    //     let skeletonData = SkeletonData::new;
+    //
+    //     return skeletonData;
+    // }
 }

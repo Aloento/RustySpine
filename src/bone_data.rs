@@ -3,7 +3,7 @@ use crate::utils::color::Color;
 pub struct BoneData<'b> {
     index: i32,
     name: String,
-    parent: Option<BoneData<'b>>,
+    parent: Option<&'b BoneData<'b>>,
     color: Color,
     length: f32,
     x: f32,
@@ -18,7 +18,7 @@ pub struct BoneData<'b> {
 }
 
 impl<'b> BoneData<'b> {
-    pub fn new(index: i32, name: String, parent: Option<BoneData<'b>>) -> Self {
+    pub fn new(index: i32, name: String, parent: Option<&'b BoneData<'b>>) -> Self {
         BoneData {
             index,
             name,

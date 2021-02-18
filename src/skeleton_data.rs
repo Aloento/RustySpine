@@ -8,5 +8,5 @@ pub struct SkeletonData<'b> {
     slots: Vec<SlotData<'b>>,
     skins: Vec<Skin>,
     events: Vec<EvenData>,
-
+    
 }
