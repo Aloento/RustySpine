@@ -60,20 +60,21 @@ impl SkeletonInput {
         f64::from(i) as f32
     }
 
-    pub fn read_string_ref(&mut self) -> *const String {
+    pub fn read_string_ref(&mut self) -> Option<*String> {
         let index = self.read_int(true) as usize;
-        // let empty = String::new();
         return if index == 0 {
-            &"".to_string()
+            None
         } else {
-            self.strings.get(index - 1).unwrap()
-        };
+            Some(self.strings.get(index - 1).unwrap())
+        }
     }
 
-    pub fn read_string(&mut self) -> String {
+    pub fn read_string(&mut self) -> Option<String> {
         let mut byte_count = self.read_int(true) as usize;
-        if byte_count == 0 || byte_count == 1 {
-            return String::new();
+        if byte_count == 0 {
+            return None
+        } else if byte_count == 1 {
+            return Some("".to_string())
         }
         byte_count -= 1;
 

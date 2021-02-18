@@ -4,12 +4,12 @@ pub struct LinkedMesh {
     parent: String,
     skin: String,
     slot_index: i32,
-    mesh: MeshAttachment,
+    mesh: *const MeshAttachment,
     inherit_deform: bool,
 }
 
 impl LinkedMesh {
-    fn new(mesh: MeshAttachment, skin: String, slot_index: i32, parent: String, inherit_deform: bool)
+    fn new(mesh: &MeshAttachment, skin: String, slot_index: i32, parent: String, inherit_deform: bool)
            -> Self {
         LinkedMesh {
             parent,

@@ -11,7 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Rust">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/color.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/color.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skeleton_binary.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_binary.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skeleton_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_data.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/linked_mesh.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/linked_mesh.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/skeleton_input.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/skeleton_input.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +94,11 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Cargo.Test tests::it_works" />
@@ -116,7 +124,7 @@
       <workItem from="1613410631660" duration="5727000" />
       <workItem from="1613588845560" duration="1204000" />
       <workItem from="1613649919970" duration="697000" />
-      <workItem from="1613650708155" duration="1184000" />
+      <workItem from="1613650708155" duration="6385000" />
     </task>
     <task id="LOCAL-00001" summary="Rust">
       <created>1613380844867</created>
@@ -230,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613414903413</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Rust">
+      <created>1613652177660</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1613652177660</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
