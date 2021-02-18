@@ -17,7 +17,7 @@ impl EvenData {
             stringValue: "".to_string(),
             audioPath: "".to_string(),
             volume: 0.0,
-            balance: 0.0
+            balance: 0.0,
         }
     }
 }

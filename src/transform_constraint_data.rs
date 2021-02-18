@@ -1,5 +1,5 @@
-use crate::constraint_data::ConstraintData;
 use crate::bone_data::BoneData;
+use crate::constraint_data::ConstraintData;
 
 pub struct TransformConstraintData<'b> {
     data: ConstraintData,
@@ -21,7 +21,7 @@ pub struct TransformConstraintData<'b> {
 
 impl<'b> TransformConstraintData<'b> {
     pub fn new(name: String) -> Self {
-        TransformConstraintData{
+        TransformConstraintData {
             data: ConstraintData::new(name),
             bones: vec![],
             target: None,
@@ -36,7 +36,7 @@ impl<'b> TransformConstraintData<'b> {
             offsetScaleY: 0.0,
             offsetShearY: 0.0,
             relative: false,
-            local: false
+            local: false,
         }
     }
 }

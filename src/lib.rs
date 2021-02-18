@@ -1,6 +1,7 @@
 #![allow(non_snake_case)]
 #![feature(assoc_char_funcs)]
 #![feature(allocator_api)]
+
 mod attachments;
 mod blend_mode;
 mod bone_data;

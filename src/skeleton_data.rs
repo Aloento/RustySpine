@@ -1,11 +1,11 @@
-use crate::bone_data::BoneData;
-use crate::slot_data::SlotData;
-use crate::skin::Skin;
-use crate::event_data::EvenData;
 use crate::animation::Animation;
+use crate::bone_data::BoneData;
+use crate::event_data::EvenData;
 use crate::ik_constraint_data::IkConstraintData;
-use crate::transform_constraint_data::TransformConstraintData;
 use crate::path_constraint_data::PathConstraintData;
+use crate::skin::Skin;
+use crate::slot_data::SlotData;
+use crate::transform_constraint_data::TransformConstraintData;
 
 pub struct SkeletonData<'b> {
     bones: Vec<BoneData<'b>>,
@@ -50,7 +50,7 @@ impl<'b> SkeletonData<'b> {
             version: "".to_string(),
             hash: "".to_string(),
             imagesPath: "".to_string(),
-            audioPath: "".to_string()
+            audioPath: "".to_string(),
         }
     }
 }

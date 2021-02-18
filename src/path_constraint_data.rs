@@ -1,5 +1,5 @@
-use crate::constraint_data::ConstraintData;
 use crate::bone_data::BoneData;
+use crate::constraint_data::ConstraintData;
 use crate::slot_data::SlotData;
 
 pub struct PathConstraintData<'b> {
@@ -29,7 +29,7 @@ impl<'b> PathConstraintData<'b> {
             position: 0.0,
             spacing: 0.0,
             rotateMix: 0.0,
-            translateMix: 0.0
+            translateMix: 0.0,
         }
     }
 }

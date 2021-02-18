@@ -1,3 +1,1 @@
-pub struct Skeleton {
-
-}
+pub struct Skeleton {}

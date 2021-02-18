@@ -24,7 +24,7 @@ impl<'b> IkConstraintData<'b> {
             stretch: false,
             uniform: false,
             mix: 1.0,
-            softness: 0.0
+            softness: 0.0,
         }
     }
 }

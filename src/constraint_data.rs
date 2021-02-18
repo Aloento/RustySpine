@@ -9,7 +9,7 @@ impl ConstraintData {
         ConstraintData {
             name,
             order: 0,
-            skin_required: false
+            skin_required: false,
         }
     }
 }
