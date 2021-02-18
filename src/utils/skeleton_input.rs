@@ -60,7 +60,7 @@ impl SkeletonInput {
         f64::from(i) as f32
     }
 
-    pub fn read_string_ref(&mut self) -> Option<*String> {
+    pub fn read_string_ref(&mut self) -> Option<&String> {
         let index = self.read_int(true) as usize;
         return if index == 0 {
             None
@@ -82,33 +82,30 @@ impl SkeletonInput {
             self.chars = Vec::with_capacity(byte_count)
         }
 
-        let mut char_count = 0 as usize;
+        let mut char_count = 0;
         for mut i in 0..char_count {
             let mut b = self.read_byte();
             match b >> 4 {
-                -1 => { panic!("EOFException") }
                 12 | 13=> {
                     self.chars[char_count] = char::from_u32((((b & 0x1F) << 6 | self.read_byte() & 0x3F) as u32)).unwrap();
-                    char_count += 1;
                     i += 2;
                 }
                 14 => {
                     self.chars[char_count] = char::from_u32(((b & 0x0F) << 12 | (self.read_byte() & 0x3F) << 6 | self.read_byte() & 0x3F) as u32).unwrap();
-                    char_count += 1;
                     i += 3;
                 }
                 _ => {
                     self.chars[char_count] = char::from_u32(b as u32).unwrap();
-                    char_count += 1;
                     i += 1;
                 }
             }
+            char_count += 1;
         }
 
         let mut str = String::new();
         for char in &self.chars {
             str.write_char(*char).unwrap()
         }
-        return str
+        return Some(str)
     }
 }
