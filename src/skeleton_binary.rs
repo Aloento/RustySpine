@@ -19,15 +19,15 @@ const PATH_MIX: u8 = 2;
 const CURVE_STEPPED: u8 = 1;
 const CURVE_BEZIER: u8 = 2;
 
-pub struct SkeletonBinary {
+pub struct SkeletonBinary<'m> {
     attachment_loader: Box<dyn AttachmentLoader>,
-    linked_meshes: Vec<LinkedMesh>,
+    linked_meshes: Vec<LinkedMesh<'m>>,
     scale: f32,
     temp_color1: Color,
     temp_color2: Color,
 }
 
-impl SkeletonBinary {
+impl<'m> SkeletonBinary<'m> {
     pub fn new(atlas: TextureAtlas) -> Self {
         SkeletonBinary {
             attachment_loader: Box::new(AtlasAttachmentLoader::new(atlas)),

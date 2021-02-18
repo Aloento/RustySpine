@@ -1,9 +1,9 @@
 use crate::utils::color::Color;
 
-pub struct BoneData {
+pub struct BoneData<'b> {
     index: i32,
     name: String,
-    parent: *const BoneData,
+    parent: &'b BoneData<'b>,
     color: Color,
     length: f32,
     x: f32,
@@ -17,8 +17,8 @@ pub struct BoneData {
     skinRequired: bool,
 }
 
-impl BoneData {
-    pub fn new(index: i32, name: String, parent: *const BoneData) -> Self {
+impl<'b> BoneData<'b> {
+    pub fn new(index: i32, name: String, parent: &'b BoneData) -> Self {
         BoneData {
             index,
             name,
