@@ -13,6 +13,9 @@ mod event_data;
 mod animation;
 mod skeleton;
 mod event;
+mod constraint_data;
+mod ik_constraint_data;
+mod transform_constraint_data;
 
 #[cfg(test)]
 mod tests {

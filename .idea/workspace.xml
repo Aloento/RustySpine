@@ -9,16 +9,12 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="EvenData">
-      <change afterPath="$PROJECT_DIR$/src/animation.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/event.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/skeleton.rs" afterDir="false" />
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Animation">
+      <change afterPath="$PROJECT_DIR$/src/constraint_data.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ik_constraint_data.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transform_constraint_data.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bone_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bone_data.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skeleton_binary.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_binary.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/skeleton_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_data.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +126,7 @@
       <workItem from="1613588845560" duration="1204000" />
       <workItem from="1613649919970" duration="697000" />
       <workItem from="1613650708155" duration="6385000" />
-      <workItem from="1613661861648" duration="11156000" />
+      <workItem from="1613661861648" duration="14179000" />
     </task>
     <task id="LOCAL-00001" summary="Rust">
       <created>1613380844867</created>
@@ -300,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613676788397</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Animation">
+      <created>1613678348990</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1613678348990</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +328,8 @@
     <MESSAGE value="Option可以代替NULL" />
     <MESSAGE value="SlotData" />
     <MESSAGE value="EvenData" />
-    <option name="LAST_COMMIT_MESSAGE" value="EvenData" />
+    <MESSAGE value="Animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Animation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
