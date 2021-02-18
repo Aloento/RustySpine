@@ -3,7 +3,7 @@ use crate::utils::color::Color;
 pub struct BoneData<'b> {
     index: i32,
     name: String,
-    parent: &'b BoneData<'b>,
+    parent: Option<BoneData<'b>>,
     color: Color,
     length: f32,
     x: f32,
@@ -18,7 +18,7 @@ pub struct BoneData<'b> {
 }
 
 impl<'b> BoneData<'b> {
-    pub fn new(index: i32, name: String, parent: &'b BoneData) -> Self {
+    pub fn new(index: i32, name: String, parent: Option<BoneData<'b>>) -> Self {
         BoneData {
             index,
             name,
@@ -59,7 +59,7 @@ impl TransformMode {
             2 => TransformMode::NoRotationOrReflection,
             3 => TransformMode::NoScale,
             4 => TransformMode::NoScaleOrReflection,
-            _ => TransformMode::Normal,
+            _ => panic!("Invalid value for TransformMode: {}", value),
         }
     }
 }
