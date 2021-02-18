@@ -2,7 +2,7 @@ use crate::utils::color::Color;
 
 pub struct BoneData<'b> {
     index: i32,
-    name: String,
+    pub(crate) name: String,
     parent: Option<&'b BoneData<'b>>,
     color: Color,
     length: f32,

@@ -97,8 +97,7 @@ impl SkeletonInput {
                         ((b & 0x0F) << 12
                             | (self.read_byte() & 0x3F) << 6
                             | self.read_byte() & 0x3F) as u32,
-                    )
-                        .unwrap();
+                    ).unwrap();
                     i += 3;
                 }
                 _ => {

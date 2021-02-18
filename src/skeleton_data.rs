@@ -17,7 +17,7 @@ pub struct SkeletonData<'b> {
     transformConstraints: Vec<TransformConstraintData<'b>>,
     pathConstraints: Vec<PathConstraintData<'b>>,
     name: String,
-    defaultSkin: Skin,
+    defaultSkin: Option<Skin>,
     x: f32,
     y: f32,
     width: f32,
@@ -41,7 +41,7 @@ impl<'b> SkeletonData<'b> {
             transformConstraints: vec![],
             pathConstraints: vec![],
             name: "".to_string(),
-            defaultSkin: Skin {},
+            defaultSkin: None,
             x: 0.0,
             y: 0.0,
             width: 0.0,
@@ -52,5 +52,31 @@ impl<'b> SkeletonData<'b> {
             imagesPath: "".to_string(),
             audioPath: "".to_string(),
         }
+    }
+
+    pub fn find_bone(&self, name: String) -> Option<&BoneData> {
+        if name.is_empty() { panic!("boneName cannot be null.") };
+        for i in 0..self.bones.len() {
+            let bone = self.bones.get(i).unwrap();
+            if bone.name.eq(&name) { return Some(bone); }
+        }
+        return None;
+    }
+
+    pub fn find_slot(&self, name: String) -> Option<&SlotData> {
+        if name.is_empty() { panic!("slotName cannot be null.") };
+        for i in 0..self.slots.len() {
+            let slot = self.slots.get(i).unwrap();
+            if slot.name.eq(&name) { return Some(slot); }
+        }
+        return None;
+    }
+
+    pub fn find_skin(&self, name: String) -> Option<&Skin> {
+        if name.is_empty() { panic!("skinName cannot be null.") };
+        for i in &self.skins {
+            if i.name.eq(&name) { return Some(i); }
+        }
+        return None;
     }
 }

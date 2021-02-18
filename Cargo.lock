@@ -6,20 +6,29 @@ version = 3
 name = "RustySpine"
 version = "0.1.0"
 dependencies = [
- "batsat",
+ "phf",
 ]
 
 [[package]]
-name = "batsat"
-version = "0.5.0"
+name = "phf"
+version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c46275d5d413790e96e7a74bab90591ba0aad8117662fadee8ba266685e5908a"
+checksum = "3dfb61232e34fcb633f43d12c58f83c1df82962dcdfa565a4e866ffc17dafe12"
 dependencies = [
- "bit-vec",
+ "phf_shared",
 ]
 
 [[package]]
-name = "bit-vec"
-version = "0.5.1"
+name = "phf_shared"
+version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f59bbe95d4e52a6398ec21238d31577f2b28a9d86807f06ca59d191d8440d0bb"
+checksum = "c00cf8b9eafe68dde5e9eaa2cef8ee84a9336a47d566ec55ca16589633b65af7"
+dependencies = [
+ "siphasher",
+]
+
+[[package]]
+name = "siphasher"
+version = "0.3.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fa8f3741c7372e75519bd9346068370c9cdaabcc1f9599cbcf2a2719352286b7"

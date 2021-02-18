@@ -1,5 +1,4 @@
-use batsat::intmap::IntSet;
-use batsat::Lit;
+use phf::Set;
 
 use crate::event::Event;
 use crate::skeleton::Skeleton;
@@ -7,7 +6,7 @@ use crate::skeleton::Skeleton;
 pub struct Animation {
     name: String,
     timelines: Vec<Box<dyn Timeline>>,
-    timelineIDs: IntSet<Lit>,
+    timelineIDs: Set<i32>,
     duration: f32,
 }
 
