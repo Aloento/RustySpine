@@ -9,14 +9,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Animation">
-      <change afterPath="$PROJECT_DIR$/src/constraint_data.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ik_constraint_data.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transform_constraint_data.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skeleton_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_data.rs" afterDir="false" />
-    </list>
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="SkeletonData" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +119,7 @@
       <workItem from="1613588845560" duration="1204000" />
       <workItem from="1613649919970" duration="697000" />
       <workItem from="1613650708155" duration="6385000" />
-      <workItem from="1613661861648" duration="14179000" />
+      <workItem from="1613661861648" duration="15362000" />
     </task>
     <task id="LOCAL-00001" summary="Rust">
       <created>1613380844867</created>
@@ -303,7 +296,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613678348990</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="ConstraintData">
+      <created>1613681446556</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1613681446556</updated>
+    </task>
+    <task id="LOCAL-00027" summary="SkeletonData">
+      <created>1613682524826</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1613682524826</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +336,9 @@
     <MESSAGE value="SlotData" />
     <MESSAGE value="EvenData" />
     <MESSAGE value="Animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Animation" />
+    <MESSAGE value="ConstraintData" />
+    <MESSAGE value="SkeletonData" />
+    <option name="LAST_COMMIT_MESSAGE" value="SkeletonData" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

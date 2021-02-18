@@ -16,6 +16,7 @@ mod event;
 mod constraint_data;
 mod ik_constraint_data;
 mod transform_constraint_data;
+mod path_constraint_data;
 
 #[cfg(test)]
 mod tests {
