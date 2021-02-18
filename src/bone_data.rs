@@ -18,7 +18,7 @@ pub struct BoneData {
 }
 
 impl BoneData {
-    pub fn new(index: i32, name: String, parent: *const BoneData) -> BoneData {
+    pub fn new(index: i32, name: String, parent: *const BoneData) -> Self {
         BoneData {
             index,
             name,
@@ -52,7 +52,7 @@ pub enum TransformMode {
 }
 
 impl TransformMode {
-    pub fn values(value: i32) -> TransformMode {
+    pub fn values(value: i32) -> Self {
         match value {
             0 => TransformMode::Normal,
             1 => TransformMode::OnlyTranslation,

@@ -9,7 +9,7 @@ pub struct SkeletonInput {
 }
 
 impl SkeletonInput {
-    pub fn new(file: String) -> SkeletonInput {
+    pub fn new(file: String) -> Self {
         SkeletonInput {
             strings: vec![],
             chars: Vec::with_capacity(32),

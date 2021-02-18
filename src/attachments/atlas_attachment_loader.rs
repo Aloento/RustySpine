@@ -13,7 +13,7 @@ pub struct AtlasAttachmentLoader {
 }
 
 impl AtlasAttachmentLoader {
-    pub fn new(atlas: TextureAtlas) -> AtlasAttachmentLoader {
+    pub fn new(atlas: TextureAtlas) -> Self {
         AtlasAttachmentLoader {
             atlas
         }

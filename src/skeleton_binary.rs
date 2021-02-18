@@ -28,7 +28,7 @@ pub struct SkeletonBinary {
 }
 
 impl SkeletonBinary {
-    pub fn new(atlas: TextureAtlas) -> SkeletonBinary {
+    pub fn new(atlas: TextureAtlas) -> Self {
         SkeletonBinary {
             attachment_loader: Box::new(AtlasAttachmentLoader::new(atlas)),
             linked_meshes: vec![],
