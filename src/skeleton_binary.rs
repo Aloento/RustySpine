@@ -34,13 +34,21 @@ impl<'m> SkeletonBinary<'m> {
             linked_meshes: vec![],
             scale: 1.0,
             temp_color1: Default::default(),
-            temp_color2: Default::default()
+            temp_color2: Default::default(),
         }
     }
 
-    // pub fn read_skeleton_data(&self, file: String) -> SkeletonData {
-    //     let scale = self.scale;
-    //     let skeletonData = SkeletonData::new;
-    //     return skeletonData
-    // }
+    pub fn set_scale(&mut self, scale: f32) {
+        if scale == 0f32 {
+            panic!("scale cannot be 0.")
+        };
+        self.scale = scale;
+    }
+
+    pub fn read_skeleton_data(&self, file: String) -> SkeletonData {
+        let scale = self.scale;
+        let skeletonData = SkeletonData::new;
+
+        return skeletonData;
+    }
 }

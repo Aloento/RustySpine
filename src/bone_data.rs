@@ -23,11 +23,11 @@ impl<'b> BoneData<'b> {
             index,
             name,
             parent,
-            color: Color{
+            color: Color {
                 r: 0.61,
                 g: 0.61,
                 b: 0.61,
-                a: 0.61
+                a: 0.61,
             },
             length: 0.0,
             x: 0.0,
@@ -38,7 +38,7 @@ impl<'b> BoneData<'b> {
             shearX: 0.0,
             shearY: 0.0,
             transformMode: TransformMode::Normal,
-            skinRequired: false
+            skinRequired: false,
         }
     }
 }

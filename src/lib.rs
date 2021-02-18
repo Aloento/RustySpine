@@ -1,12 +1,13 @@
 #![allow(non_snake_case)]
 #![feature(assoc_char_funcs)]
-mod skeleton_binary;
-mod utils;
 mod attachments;
-mod skin;
-mod skeleton_data;
+mod blend_mode;
 mod bone_data;
+mod skeleton_binary;
+mod skeleton_data;
+mod skin;
 mod slot_data;
+mod utils;
 
 #[cfg(test)]
 mod tests {

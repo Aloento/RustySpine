@@ -9,14 +9,12 @@ use crate::skin::Skin;
 use crate::utils::texture_atlas::TextureAtlas;
 
 pub struct AtlasAttachmentLoader {
-    atlas: TextureAtlas
+    atlas: TextureAtlas,
 }
 
 impl AtlasAttachmentLoader {
     pub fn new(atlas: TextureAtlas) -> Self {
-        AtlasAttachmentLoader {
-            atlas
-        }
+        AtlasAttachmentLoader { atlas }
     }
 }
 

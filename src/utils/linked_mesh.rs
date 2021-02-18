@@ -9,8 +9,13 @@ pub struct LinkedMesh<'m> {
 }
 
 impl<'m> LinkedMesh<'m> {
-    fn new(mesh: &'m MeshAttachment, skin: String, slot_index: i32, parent: String, inherit_deform: bool)
-           -> Self {
+    fn new(
+        mesh: &'m MeshAttachment,
+        skin: String,
+        slot_index: i32,
+        parent: String,
+        inherit_deform: bool,
+    ) -> Self {
         LinkedMesh {
             parent,
             skin,

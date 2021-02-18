@@ -1,6 +1,6 @@
 use std::cell::Ref;
-use std::vec::IntoIter;
 use std::fmt::Write;
+use std::vec::IntoIter;
 
 pub struct SkeletonInput {
     strings: Vec<String>,
@@ -66,15 +66,15 @@ impl SkeletonInput {
             None
         } else {
             Some(self.strings.get(index - 1).unwrap())
-        }
+        };
     }
 
     pub fn read_string(&mut self) -> Option<String> {
         let mut byte_count = self.read_int(true) as usize;
         if byte_count == 0 {
-            return None
+            return None;
         } else if byte_count == 1 {
-            return Some("".to_string())
+            return Some("".to_string());
         }
         byte_count -= 1;
 
@@ -86,12 +86,19 @@ impl SkeletonInput {
         for mut i in 0..char_count {
             let mut b = self.read_byte();
             match b >> 4 {
-                12 | 13=> {
-                    self.chars[char_count] = char::from_u32((((b & 0x1F) << 6 | self.read_byte() & 0x3F) as u32)).unwrap();
+                12 | 13 => {
+                    self.chars[char_count] =
+                        char::from_u32((((b & 0x1F) << 6 | self.read_byte() & 0x3F) as u32))
+                            .unwrap();
                     i += 2;
                 }
                 14 => {
-                    self.chars[char_count] = char::from_u32(((b & 0x0F) << 12 | (self.read_byte() & 0x3F) << 6 | self.read_byte() & 0x3F) as u32).unwrap();
+                    self.chars[char_count] = char::from_u32(
+                        ((b & 0x0F) << 12
+                            | (self.read_byte() & 0x3F) << 6
+                            | self.read_byte() & 0x3F) as u32,
+                    )
+                    .unwrap();
                     i += 3;
                 }
                 _ => {
@@ -106,6 +113,6 @@ impl SkeletonInput {
         for char in &self.chars {
             str.write_char(*char).unwrap()
         }
-        return Some(str)
+        return Some(str);
     }
 }
