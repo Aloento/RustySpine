@@ -8,6 +8,7 @@ mod skeleton_data;
 mod skin;
 mod slot_data;
 mod utils;
+mod event_data;
 
 #[cfg(test)]
 mod tests {
