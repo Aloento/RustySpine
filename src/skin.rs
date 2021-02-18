@@ -1,16 +1,23 @@
 use std::collections::hash_map::DefaultHasher;
 use std::hash::{Hash, Hasher};
 
+use object_pool::Pool;
 use phf::{Map, PhfHash};
 
 use crate::attachments::attachment::Attachment;
+use crate::bone_data::BoneData;
+use crate::constraint_data::ConstraintData;
 
-pub struct Skin {
+pub struct Skin<'b, 'c> {
     pub(crate) name: String,
     attachments: Map<SkinEntry, SkinEntry>,
+    bones: Vec<&'b BoneData<'b>>,
+    constraints: Vec<&'c ConstraintData>,
+    keyPool: Pool<Key>,
+    lookup: SkinEntry,
 }
 
-impl Skin {}
+impl<'b, 'c> Skin<'b, 'c> {}
 
 pub struct SkinEntry {
     slotIndex: i32,
@@ -41,10 +48,19 @@ impl SkinEntry {
             hashCode: hasher.finish() as i32 + slotIndex + 37,
         }
     }
+}
 
-    pub fn equals<T>(&self, object: T) -> bool {
-        let other = object as SkinEntry;
+impl PartialEq for SkinEntry {
+    fn eq(&self, other: &Self) -> bool {
         if self.slotIndex != other.slotIndex { return false; };
         return self.name.eq(&other.name);
     }
 }
+
+struct Key {
+    slotIndex: i32,
+    name: String,
+    hashCode: i32,
+}
+
+impl Key {}

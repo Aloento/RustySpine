@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 phf = "0.8.0"
+object-pool = "0.5.3"

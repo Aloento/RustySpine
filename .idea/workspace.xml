@@ -9,14 +9,13 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="SkeletonData">
-      <change afterPath="$PROJECT_DIR$/src/attachments/attachment.rs" afterDir="false" />
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Skin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/animation.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/animation.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bone_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bone_data.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attachments/atlas_attachment_loader.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/atlas_attachment_loader.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attachments/attachment_loader.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/attachment_loader.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ik_constraint_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ik_constraint_data.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/path_constraint_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/path_constraint_data.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/skeleton_binary.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_binary.rs" afterDir="false" />
@@ -24,7 +23,6 @@
       <change beforePath="$PROJECT_DIR$/src/skin.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skin.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/slot_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/slot_data.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transform_constraint_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/transform_constraint_data.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/color.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/color.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/linked_mesh.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/linked_mesh.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/skeleton_input.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/skeleton_input.rs" afterDir="false" />
     </list>
@@ -137,7 +135,7 @@
       <workItem from="1613588845560" duration="1204000" />
       <workItem from="1613649919970" duration="697000" />
       <workItem from="1613650708155" duration="6385000" />
-      <workItem from="1613661861648" duration="19821000" />
+      <workItem from="1613661861648" duration="20993000" />
     </task>
     <task id="LOCAL-00001" summary="Rust">
       <created>1613380844867</created>
@@ -342,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613682784022</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Skin">
+      <created>1613687272121</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1613687272121</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +375,8 @@
     <MESSAGE value="Animation" />
     <MESSAGE value="ConstraintData" />
     <MESSAGE value="SkeletonData" />
-    <option name="LAST_COMMIT_MESSAGE" value="SkeletonData" />
+    <MESSAGE value="Skin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skin" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
