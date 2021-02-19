@@ -9,8 +9,10 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Skin">
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="add_attachment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/skin.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skin.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +125,7 @@
       <workItem from="1613649919970" duration="697000" />
       <workItem from="1613650708155" duration="6385000" />
       <workItem from="1613661861648" duration="20993000" />
-      <workItem from="1613729263852" duration="5125000" />
+      <workItem from="1613729263852" duration="11378000" />
     </task>
     <task id="LOCAL-00001" summary="Rust">
       <created>1613380844867</created>
@@ -349,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613735170258</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="add_attachment">
+      <created>1613736163359</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1613736163359</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +388,8 @@
     <MESSAGE value="SkeletonData" />
     <MESSAGE value="Key" />
     <MESSAGE value="Skin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skin" />
+    <MESSAGE value="add_attachment" />
+    <option name="LAST_COMMIT_MESSAGE" value="add_attachment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

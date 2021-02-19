@@ -1,8 +1,9 @@
 use std::collections::hash_map::DefaultHasher;
+use std::collections::HashMap;
+use std::convert::TryInto;
 use std::hash::{Hash, Hasher};
 
 use object_pool::Pool;
-use phf::{Map, phf_map, PhfHash};
 
 use crate::attachments::attachment::Attachment;
 use crate::bone_data::BoneData;
@@ -10,7 +11,7 @@ use crate::constraint_data::ConstraintData;
 
 pub struct Skin<'b, 'c> {
     pub(crate) name: String,
-    attachments: Map<SkinEntry, SkinEntry>,
+    attachments: HashMap<SkinEntry, SkinEntry>,
     bones: Vec<&'b BoneData<'b>>,
     constraints: Vec<&'c ConstraintData>,
     keyPool: Pool<Key>,
@@ -20,9 +21,9 @@ pub struct Skin<'b, 'c> {
 impl<'b, 'c> Skin<'b, 'c> {
     pub fn new(name: String) -> Self {
         if name.is_empty() { panic!("name cannot be null.") };
-        Skin {
+        Self {
             name,
-            attachments: phf_map! {},
+            attachments: HashMap::default(),
             bones: vec![],
             constraints: vec![],
             keyPool: Pool::new(64, || Key::new()),
@@ -31,8 +32,14 @@ impl<'b, 'c> Skin<'b, 'c> {
     }
 
     pub fn add_attachment(&self, slotIndex: i32, name: String, attachment: Attachment) {
-        let mut key = self.keyPool.try_pull().unwrap();
+        let mut key = self.keyPool.pull(());
         key.set(slotIndex, name);
+    }
+
+    pub fn set_attachment(&self, slotIndex: i32, name: String, attachment: Attachment) {
+        let newEntry = SkinEntry::with(slotIndex, name, attachment);
+        let oldEntry = self.attachments.get();
+        self.attachments.insert();
     }
 }
 
@@ -45,11 +52,11 @@ pub struct SkinEntry {
 
 impl SkinEntry {
     pub fn new() -> Self {
-        return SkinEntry::set(0, "".to_string());
+        return Self::set(0, "".to_string());
     }
 
     pub fn with(slotIndex: i32, name: String, attachment: Attachment) -> Self {
-        let mut i = SkinEntry::set(slotIndex, name);
+        let mut i = Self::set(slotIndex, name);
         i.attachment = attachment;
         return i;
     }
@@ -58,7 +65,7 @@ impl SkinEntry {
         if name.is_empty() { panic!("name cannot be null.") }
         let mut hasher = DefaultHasher::new();
         name.phf_hash(&mut hasher);
-        SkinEntry {
+        Self {
             slotIndex,
             name,
             attachment: Attachment::new("".to_string()),
