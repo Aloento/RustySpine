@@ -29,6 +29,11 @@ impl<'b, 'c> Skin<'b, 'c> {
             lookup: SkinEntry::new(),
         }
     }
+
+    pub fn add_attachment(&self, slotIndex: i32, name: String, attachment: Attachment) {
+        let mut key = self.keyPool.try_pull().unwrap();
+        key.set(slotIndex, name);
+    }
 }
 
 pub struct SkinEntry {
