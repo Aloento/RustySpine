@@ -9,11 +9,13 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="add_attachment">
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Skin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/animation.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/animation.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attachments/attachment.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/attachment.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skeleton_binary.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_binary.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/skin.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skin.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/skeleton_input.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/skeleton_input.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +65,6 @@
     <property name="settings.editor.selected.configurable" value="language.rust" />
   </component>
   <component name="RunManager" selected="Cargo.Test">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Test tests::it_works" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="test --package RustySpine --lib tests::it_works -- --exact" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -125,7 +122,8 @@
       <workItem from="1613649919970" duration="697000" />
       <workItem from="1613650708155" duration="6385000" />
       <workItem from="1613661861648" duration="20993000" />
-      <workItem from="1613729263852" duration="11378000" />
+      <workItem from="1613729263852" duration="11594000" />
+      <workItem from="1613743757098" duration="5548000" />
     </task>
     <task id="LOCAL-00001" summary="Rust">
       <created>1613380844867</created>
@@ -358,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613736163359</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Skin">
+      <created>1613742622283</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1613742622283</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,9 +392,9 @@
     <MESSAGE value="ConstraintData" />
     <MESSAGE value="SkeletonData" />
     <MESSAGE value="Key" />
-    <MESSAGE value="Skin" />
     <MESSAGE value="add_attachment" />
-    <option name="LAST_COMMIT_MESSAGE" value="add_attachment" />
+    <MESSAGE value="Skin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skin" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

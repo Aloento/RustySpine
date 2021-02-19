@@ -1,7 +1,6 @@
 use crate::attachments::atlas_attachment_loader::AtlasAttachmentLoader;
 use crate::attachments::attachment_loader::AttachmentLoader;
-use crate::attachments::mesh_attachment::MeshAttachment;
-use crate::skeleton_data::SkeletonData;
+
 use crate::utils::color::Color;
 use crate::utils::linked_mesh::LinkedMesh;
 use crate::utils::texture_atlas::TextureAtlas;

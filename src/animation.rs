@@ -1,4 +1,4 @@
-use phf::Set;
+use std::collections::HashSet;
 
 use crate::event::Event;
 use crate::skeleton::Skeleton;
@@ -6,7 +6,7 @@ use crate::skeleton::Skeleton;
 pub struct Animation {
     name: String,
     timelines: Vec<Box<dyn Timeline>>,
-    timelineIDs: Set<i32>,
+    timelineIDs: HashSet<i32>,
     duration: f32,
 }
 
@@ -23,5 +23,13 @@ pub enum MixDirection {
 }
 
 pub trait Timeline {
-    fn apply(&self, skeleton: Skeleton, lastTime: f32, events: Vec<Event>, alpha: f32, blend: MixBlend, direction: MixDirection);
+    fn apply(
+        &self,
+        skeleton: Skeleton,
+        lastTime: f32,
+        events: Vec<Event>,
+        alpha: f32,
+        blend: MixBlend,
+        direction: MixDirection,
+    );
 }

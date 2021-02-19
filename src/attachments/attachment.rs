@@ -1,3 +1,4 @@
+#[derive(Clone, Eq, PartialEq, Hash)]
 pub struct Attachment {
     name: String,
 }

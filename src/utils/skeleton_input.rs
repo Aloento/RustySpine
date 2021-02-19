@@ -1,4 +1,3 @@
-use std::cell::Ref;
 use std::fmt::Write;
 use std::vec::IntoIter;
 
@@ -88,8 +87,7 @@ impl SkeletonInput {
             match b >> 4 {
                 12 | 13 => {
                     self.chars[char_count] =
-                        char::from_u32((((b & 0x1F) << 6 | self.read_byte() & 0x3F) as u32))
-                            .unwrap();
+                        char::from_u32(((b & 0x1F) << 6 | self.read_byte() & 0x3F) as u32).unwrap();
                     i += 2;
                 }
                 14 => {
@@ -97,7 +95,8 @@ impl SkeletonInput {
                         ((b & 0x0F) << 12
                             | (self.read_byte() & 0x3F) << 6
                             | self.read_byte() & 0x3F) as u32,
-                    ).unwrap();
+                    )
+                    .unwrap();
                     i += 3;
                 }
                 _ => {
