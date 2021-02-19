@@ -7,17 +7,17 @@ use crate::skin::Skin;
 use crate::slot_data::SlotData;
 use crate::transform_constraint_data::TransformConstraintData;
 
-pub struct SkeletonData<'a, 'b, 'c> {
-    bones: Vec<BoneData<'b>>,
-    slots: Vec<SlotData<'b>>,
-    skins: Vec<Skin<'a, 'b, 'c>>,
+pub struct SkeletonData<'a> {
+    bones: Vec<BoneData<'a>>,
+    slots: Vec<SlotData<'a>>,
+    skins: Vec<Skin<'a>>,
     events: Vec<EvenData>,
     animations: Vec<Animation>,
-    ikConstraints: Vec<IkConstraintData<'b>>,
-    transformConstraints: Vec<TransformConstraintData<'b>>,
-    pathConstraints: Vec<PathConstraintData<'b>>,
+    ikConstraints: Vec<IkConstraintData<'a>>,
+    transformConstraints: Vec<TransformConstraintData<'a>>,
+    pathConstraints: Vec<PathConstraintData<'a>>,
     name: String,
-    defaultSkin: Option<Skin<'a, 'b, 'c>>,
+    defaultSkin: Option<Skin<'a>>,
     x: f32,
     y: f32,
     width: f32,
@@ -29,7 +29,7 @@ pub struct SkeletonData<'a, 'b, 'c> {
     audioPath: String,
 }
 
-impl<'a, 'b, 'c> SkeletonData<'a, 'b, 'c> {
+impl<'a> SkeletonData<'a> {
     pub fn new() -> Self {
         SkeletonData {
             bones: vec![],

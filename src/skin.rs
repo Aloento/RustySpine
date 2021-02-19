@@ -9,15 +9,15 @@ use crate::bone_data::BoneData;
 use crate::constraint_data::ConstraintData;
 use crate::skeleton::Skeleton;
 
-pub struct Skin<'a, 'b, 'c> {
+pub struct Skin<'a> {
     pub(crate) name: String,
     attachments: HashMap<SkinEntry<'a>, SkinEntry<'a>>,
-    bones: Vec<&'b BoneData<'b>>,
-    constraints: Vec<&'c ConstraintData>,
+    bones: Vec<&'a BoneData<'a>>,
+    constraints: Vec<&'a ConstraintData>,
     lookup: SkinEntry<'a>,
 }
 
-impl<'a, 'b, 'c> Skin<'a, 'b, 'c> {
+impl<'a> Skin<'a> {
     pub fn new(name: String) -> Self {
         if name.is_empty() {
             panic!("name cannot be null.")
@@ -61,7 +61,7 @@ impl<'a, 'b, 'c> Skin<'a, 'b, 'c> {
                 let attachment = self.get_attachment(slotIndex, entry.name.clone());
                 match attachment {
                     None => {}
-                    Some(attachment) => {slot.set_attachment(attachment)}
+                    Some(attachment) => { slot.set_attachment(attachment) }
                 }
             }
         }

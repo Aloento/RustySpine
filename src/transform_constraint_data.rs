@@ -1,10 +1,10 @@
 use crate::bone_data::BoneData;
 use crate::constraint_data::ConstraintData;
 
-pub struct TransformConstraintData<'b> {
+pub struct TransformConstraintData<'a> {
     data: ConstraintData,
-    bones: Vec<&'b BoneData<'b>>,
-    target: Option<&'b BoneData<'b>>,
+    bones: Vec<&'a BoneData<'a>>,
+    target: Option<&'a BoneData<'a>>,
     rotateMix: f32,
     translateMix: f32,
     scaleMix: f32,
@@ -19,7 +19,7 @@ pub struct TransformConstraintData<'b> {
     local: bool,
 }
 
-impl<'b> TransformConstraintData<'b> {
+impl<'a> TransformConstraintData<'a> {
     pub fn new(name: String) -> Self {
         TransformConstraintData {
             data: ConstraintData::new(name),

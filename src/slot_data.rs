@@ -2,18 +2,18 @@ use crate::blend_mode::BlendMode;
 use crate::bone_data::BoneData;
 use crate::utils::color::Color;
 
-pub struct SlotData<'b> {
+pub struct SlotData<'a> {
     index: i32,
     pub(crate) name: String,
-    boneData: &'b BoneData<'b>,
+    boneData: &'a BoneData<'a>,
     color: Color,
     darkColor: Color,
     attachmentName: String,
     blendMode: BlendMode,
 }
 
-impl<'b> SlotData<'b> {
-    pub fn new(index: i32, name: String, boneData: &'b BoneData<'b>) -> Self {
+impl<'a> SlotData<'a> {
+    pub fn new(index: i32, name: String, boneData: &'a BoneData<'a>) -> Self {
         SlotData {
             index,
             name,

@@ -1,10 +1,10 @@
 use crate::bone_data::BoneData;
 use crate::constraint_data::ConstraintData;
 
-pub struct IkConstraintData<'b> {
+pub struct IkConstraintData<'a> {
     data: ConstraintData,
-    bones: Vec<&'b BoneData<'b>>,
-    target: Option<&'b BoneData<'b>>,
+    bones: Vec<&'a BoneData<'a>>,
+    target: Option<&'a BoneData<'a>>,
     bendDirection: i32,
     compress: bool,
     stretch: bool,
@@ -13,7 +13,7 @@ pub struct IkConstraintData<'b> {
     softness: f32,
 }
 
-impl<'b> IkConstraintData<'b> {
+impl<'a> IkConstraintData<'a> {
     pub fn new(name: String) -> Self {
         IkConstraintData {
             data: ConstraintData::new(name),

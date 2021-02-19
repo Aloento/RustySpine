@@ -2,10 +2,10 @@ use crate::bone_data::BoneData;
 use crate::constraint_data::ConstraintData;
 use crate::slot_data::SlotData;
 
-pub struct PathConstraintData<'b> {
+pub struct PathConstraintData<'a> {
     data: ConstraintData,
-    bones: Vec<&'b BoneData<'b>>,
-    target: Option<&'b SlotData<'b>>,
+    bones: Vec<&'a BoneData<'a>>,
+    target: Option<&'a SlotData<'a>>,
     positionMode: PositionMode,
     spacingMode: SpacingMode,
     rotateMode: RotateMode,
@@ -16,7 +16,7 @@ pub struct PathConstraintData<'b> {
     translateMix: f32,
 }
 
-impl<'b> PathConstraintData<'b> {
+impl<'a> PathConstraintData<'a> {
     pub fn new(name: String) -> Self {
         PathConstraintData {
             data: ConstraintData::new(name),
