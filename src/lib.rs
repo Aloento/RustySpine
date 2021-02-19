@@ -18,6 +18,7 @@ mod constraint_data;
 mod ik_constraint_data;
 mod transform_constraint_data;
 mod path_constraint_data;
+mod slot;
 
 #[cfg(test)]
 mod tests {
