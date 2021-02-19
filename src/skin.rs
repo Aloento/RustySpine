@@ -63,4 +63,28 @@ struct Key {
     hashCode: i32,
 }
 
-impl Key {}
+impl Key {
+    pub fn new() -> Self {
+        Key {
+            slotIndex: 0,
+            name: "".to_string(),
+            hashCode: 0,
+        }
+    }
+
+    pub fn set(&mut self, slotIndex: i32, name: String) {
+        if name.is_empty() { panic!("name cannot be null.") };
+        let mut hasher = DefaultHasher::new();
+        self.name.phf_hash(&mut hasher);
+        self.name = name;
+        self.slotIndex = slotIndex;
+        self.hashCode = hasher.finish() as i32 + slotIndex + 37;
+    }
+}
+
+impl PartialEq for Key {
+    fn eq(&self, other: &Self) -> bool {
+        if self.slotIndex != other.slotIndex { return false; };
+        return self.name.eq(&other.name);
+    }
+}
