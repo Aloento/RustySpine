@@ -1,5 +1,3 @@
-use std::borrow::Borrow;
-use std::cell::RefCell;
 use std::collections::hash_map::DefaultHasher;
 use std::collections::HashMap;
 use std::hash::{Hash, Hasher};
@@ -8,7 +6,6 @@ use crate::attachments::attachment::Attachment;
 use crate::bone_data::BoneData;
 use crate::constraint_data::ConstraintData;
 use crate::skeleton::Skeleton;
-use std::ops::Deref;
 
 pub struct Skin<'a> {
     pub(crate) name: String,
@@ -32,7 +29,7 @@ impl<'a> Skin<'a> {
         }
     }
 
-    pub fn set_attachment(&mut self, slotIndex: i32, name: String, attachment: Option<Attachment>) {
+    pub fn set_attachment(&mut self, slotIndex: i32, name: String, attachment: Attachment) {
         let mut newEntry = SkinEntry::with(slotIndex, name, attachment);
         let mut oldEntry = self.attachments.get_mut(&newEntry);
         match oldEntry {
@@ -45,24 +42,26 @@ impl<'a> Skin<'a> {
         }
     }
 
-    pub fn get_attachment(&mut self, slotIndex: i32, name: &String) -> Option<&Attachment> {
+    pub fn get_attachment(&'_ mut self, slotIndex: i32, name: &String) -> Option<&'_ Attachment> {
         self.lookup.set(slotIndex, name.clone());
         let entry = self.attachments.get(&self.lookup);
         match entry {
             None => None,
-            Some(entry) => Some(&entry.attachment.unwrap()),
+            Some(entry) => Some(&entry.attachment),
         }
     }
 
-    fn attachAll(&mut self, skeleton: &mut Skeleton<'a>, oldSkin: &Skin) {
+    fn attachAll(&'_ mut self, skeleton: &mut Skeleton<'a>, oldSkin: &Skin) {
         for entry in oldSkin.attachments.keys() {
             let slotIndex = entry.slotIndex;
             let slot = skeleton.slots.get_mut(slotIndex as usize).unwrap();
-            if slot.attachment == &entry.attachment.unwrap() {
+            if slot.attachment == &entry.attachment {
                 let attachment = self.get_attachment(slotIndex, &entry.name);
                 match attachment {
                     None => {}
-                    Some(_) => { slot.set_attachment(attachment.unwrap()) }
+                    Some(attachment) => {
+                        slot.attachment = attachment;
+                    }
                 }
             }
         }
@@ -73,16 +72,16 @@ impl<'a> Skin<'a> {
 pub struct SkinEntry {
     slotIndex: i32,
     name: String,
-    attachment: Option<Attachment>,
+    attachment: Attachment,
     hashCode: i32,
 }
 
 impl SkinEntry {
     pub fn new() -> Self {
-        return Self::with(0, "".to_string(), None);
+        return Self::with(0, "".to_string(), Attachment::new("".to_string()));
     }
 
-    pub fn with(slotIndex: i32, name: String, attachment: Option<Attachment>) -> Self {
+    pub fn with(slotIndex: i32, name: String, attachment: Attachment) -> Self {
         let mut hasher = DefaultHasher::new();
         name.hash(&mut hasher);
         Self {
@@ -94,7 +93,9 @@ impl SkinEntry {
     }
 
     fn set(&mut self, slotIndex: i32, name: String) {
-        if name.is_empty() { panic!("name cannot be null.") }
+        if name.is_empty() {
+            panic!("name cannot be null.")
+        }
         let mut hasher = DefaultHasher::new();
         name.hash(&mut hasher);
         self.name = name;

@@ -6,7 +6,9 @@ pub struct Slot<'a> {
 
 impl<'a> Slot<'a> {
     pub fn set_attachment(&mut self, attachment: &'a Attachment) {
-        if self.attachment == attachment { return; }
+        if self.attachment == attachment {
+            return;
+        }
         self.attachment = attachment;
     }
 }

@@ -44,7 +44,7 @@ impl PositionMode {
         match value {
             0 => PositionMode::Fixed,
             1 => PositionMode::Percent,
-            _ => panic!("Invalid value for PositionMode: {}", value)
+            _ => panic!("Invalid value for PositionMode: {}", value),
         }
     }
 }
@@ -61,7 +61,7 @@ impl SpacingMode {
             0 => SpacingMode::Length,
             1 => SpacingMode::Fixed,
             2 => SpacingMode::Percent,
-            _ => panic!("Invalid value for SpacingMode: {}", value)
+            _ => panic!("Invalid value for SpacingMode: {}", value),
         }
     }
 }
@@ -78,7 +78,7 @@ impl RotateMode {
             0 => RotateMode::Tangent,
             1 => RotateMode::Chain,
             2 => RotateMode::ChainScale,
-            _ => panic!("Invalid value for {}", value)
+            _ => panic!("Invalid value for {}", value),
         }
     }
 }

@@ -9,9 +9,15 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="和借阅检查器打架">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="不知道咋整了">
+      <change beforePath="$PROJECT_DIR$/src/attachments/attachment.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/attachment.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attachments/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/path_constraint_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/path_constraint_data.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skeleton_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_data.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/skin.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skin.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slot.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/slot.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/linked_mesh.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/linked_mesh.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -385,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613764573078</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="不知道咋整了">
+      <created>1613769579376</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1613769579376</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,7 +432,8 @@
     <MESSAGE value="IDEA我真的不知道该说什么" />
     <MESSAGE value="&amp;mut Slot&lt;'_&gt;" />
     <MESSAGE value="和借阅检查器打架" />
-    <option name="LAST_COMMIT_MESSAGE" value="和借阅检查器打架" />
+    <MESSAGE value="不知道咋整了" />
+    <option name="LAST_COMMIT_MESSAGE" value="不知道咋整了" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
