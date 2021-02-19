@@ -2,7 +2,7 @@ use std::collections::hash_map::DefaultHasher;
 use std::hash::{Hash, Hasher};
 
 use object_pool::Pool;
-use phf::{Map, PhfHash};
+use phf::{Map, phf_map, PhfHash};
 
 use crate::attachments::attachment::Attachment;
 use crate::bone_data::BoneData;
@@ -17,7 +17,19 @@ pub struct Skin<'b, 'c> {
     lookup: SkinEntry,
 }
 
-impl<'b, 'c> Skin<'b, 'c> {}
+impl<'b, 'c> Skin<'b, 'c> {
+    pub fn new(name: String) -> Self {
+        if name.is_empty() { panic!("name cannot be null.") };
+        Skin {
+            name,
+            attachments: phf_map! {},
+            bones: vec![],
+            constraints: vec![],
+            keyPool: Pool::new(64, || Key::new()),
+            lookup: SkinEntry::new(),
+        }
+    }
+}
 
 pub struct SkinEntry {
     slotIndex: i32,

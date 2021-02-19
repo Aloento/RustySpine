@@ -7,5 +7,5 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-phf = "0.8.0"
+phf = { version = "0.8.0", features = ["macros"] }
 object-pool = "0.5.3"
