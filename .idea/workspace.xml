@@ -9,19 +9,9 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="&amp;mut Slot&lt;'_&gt;">
-      <change beforePath="$PROJECT_DIR$/src/animation.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/animation.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/attachment_loader.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/attachment_loader.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bone_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bone_data.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ik_constraint_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ik_constraint_data.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/path_constraint_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/path_constraint_data.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skeleton_binary.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_binary.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skeleton_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_data.rs" afterDir="false" />
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="和借阅检查器打架">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/skin.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skin.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slot_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/slot_data.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transform_constraint_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/transform_constraint_data.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/linked_mesh.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/linked_mesh.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/skeleton_input.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/skeleton_input.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +124,7 @@
       <workItem from="1613661861648" duration="20993000" />
       <workItem from="1613729263852" duration="11594000" />
       <workItem from="1613743757098" duration="6410000" />
-      <workItem from="1613750790374" duration="6668000" />
+      <workItem from="1613750790374" duration="7741000" />
     </task>
     <task id="LOCAL-00001" summary="Rust">
       <created>1613380844867</created>
@@ -388,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613764204355</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="和借阅检查器打架">
+      <created>1613764573078</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1613764573078</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +418,8 @@
     <MESSAGE value="Skin" />
     <MESSAGE value="IDEA我真的不知道该说什么" />
     <MESSAGE value="&amp;mut Slot&lt;'_&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&amp;mut Slot&lt;'_&gt;" />
+    <MESSAGE value="和借阅检查器打架" />
+    <option name="LAST_COMMIT_MESSAGE" value="和借阅检查器打架" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
