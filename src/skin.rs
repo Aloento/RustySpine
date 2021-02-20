@@ -12,7 +12,6 @@ pub struct Skin<'a> {
     attachments: HashMap<SkinEntry, SkinEntry>,
     bones: Vec<&'a BoneData<'a>>,
     constraints: Vec<&'a ConstraintData>,
-    lookup: SkinEntry,
 }
 
 impl<'a> Skin<'a> {
@@ -25,7 +24,6 @@ impl<'a> Skin<'a> {
             attachments: HashMap::default(),
             bones: vec![],
             constraints: vec![],
-            lookup: SkinEntry::new(),
         }
     }
 
@@ -35,8 +33,8 @@ impl<'a> Skin<'a> {
         name: String,
         attachment: Attachment,
     ) {
-        let mut newEntry = SkinEntry::with(slotIndex, name, attachment);
-        let mut oldEntry = self.attachments.get_mut(&newEntry);
+        let newEntry = SkinEntry::with(slotIndex, name, attachment);
+        let oldEntry = self.attachments.get_mut(&newEntry);
         match oldEntry {
             None => {
                 self.attachments.insert(newEntry.clone(), newEntry);
@@ -48,12 +46,13 @@ impl<'a> Skin<'a> {
     }
 
     pub fn get_attachment<'b: 'a>(
-        &'b mut self,
+        &'b self,
         slotIndex: i32,
         name: &String,
     ) -> Option<&'a Attachment> {
-        self.lookup.set(slotIndex, name.clone());
-        let entry = self.attachments.get(&self.lookup);
+        let mut lookup: SkinEntry = SkinEntry::new();
+        lookup.set(slotIndex, name.clone());
+        let entry = self.attachments.get(&lookup);
         match entry {
             None => None,
             Some(entry) => Some(&entry.attachment),
@@ -65,12 +64,15 @@ impl<'a> Skin<'a> {
             let slotIndex = entry.slotIndex;
             let slot = skeleton.slots.get_mut(slotIndex as usize).unwrap();
             if slot.attachment == &entry.attachment {
-                let attachment = self.get_attachment(slotIndex, &entry.name);
-                match attachment {
-                    None => {}
-                    Some(attachment) => {
+                let mut lookup: SkinEntry = SkinEntry::new();
+                lookup.set(slotIndex, entry.name.clone());
+                let entry = self.attachments.get(&lookup);
+                match entry {
+                    Some(entry) => {
+                        let attachment = &entry.attachment;
                         slot.attachment = attachment;
                     }
+                    None => {}
                 }
             }
         }
