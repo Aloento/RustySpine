@@ -24,6 +24,8 @@ mod updatable;
 mod ik_constraint;
 mod transform_constraint;
 mod path_constraint;
+mod animation_state_data;
+mod animation_state;
 
 #[cfg(test)]
 mod tests {

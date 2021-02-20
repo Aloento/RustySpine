@@ -9,12 +9,13 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Updatable">
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="PathConstraint">
+      <change afterPath="$PROJECT_DIR$/src/animation_state.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/animation_state_data.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ik_constraint.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ik_constraint.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/path_constraint.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/path_constraint.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/skeleton.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transform_constraint.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/transform_constraint.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skeleton_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_data.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +130,7 @@
       <workItem from="1613743757098" duration="6410000" />
       <workItem from="1613750790374" duration="7741000" />
       <workItem from="1613829047440" duration="54000" />
-      <workItem from="1613829112224" duration="12071000" />
+      <workItem from="1613829112224" duration="13515000" />
     </task>
     <task id="LOCAL-00001" summary="Rust">
       <created>1613380844867</created>
@@ -453,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613850043309</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="PathConstraint">
+      <created>1613854154111</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1613854154111</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +500,8 @@
     <MESSAGE value="Skeleton" />
     <MESSAGE value="Bone!" />
     <MESSAGE value="Updatable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updatable" />
+    <MESSAGE value="PathConstraint" />
+    <option name="LAST_COMMIT_MESSAGE" value="PathConstraint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

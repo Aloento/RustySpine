@@ -8,14 +8,14 @@ use crate::slot_data::SlotData;
 use crate::transform_constraint_data::TransformConstraintData;
 
 pub struct SkeletonData<'a> {
-    bones: Vec<BoneData<'a>>,
-    slots: Vec<SlotData<'a>>,
+    pub(crate) bones: Vec<BoneData<'a>>,
+    pub(crate) slots: Vec<SlotData<'a>>,
     skins: Vec<Skin<'a>>,
     events: Vec<EvenData>,
     animations: Vec<Animation>,
-    ikConstraints: Vec<IkConstraintData<'a>>,
-    transformConstraints: Vec<TransformConstraintData<'a>>,
-    pathConstraints: Vec<PathConstraintData<'a>>,
+    pub(crate) ikConstraints: Vec<IkConstraintData<'a>>,
+    pub(crate) transformConstraints: Vec<TransformConstraintData<'a>>,
+    pub(crate) pathConstraints: Vec<PathConstraintData<'a>>,
     name: String,
     defaultSkin: Option<Skin<'a>>,
     x: f32,

@@ -26,3 +26,33 @@ pub struct Skeleton<'a> {
     x: f32,
     y: f32,
 }
+
+impl<'a> Skeleton<'a> {
+    pub fn new(data: SkeletonData) -> Self {
+        let mut i = Self {
+            data,
+            bones: Vec::with_capacity(data.bones.len()),
+            slots: Vec::with_capacity(data.slots.len()),
+            ikConstraints: Vec::with_capacity(data.ikConstraints.len()),
+            transformConstraints: Vec::with_capacity(data.transformConstraints.len()),
+            pathConstraints: Vec::with_capacity(data.pathConstraints.len()),
+            updateCache: vec![],
+            updateCacheReset: vec![],
+            color: Color{
+                r: 1.0,
+                g: 1.0,
+                b: 1.0,
+                a: 1.0
+            },
+            drawOrder: Vec::with_capacity(data.slots.len()),
+            skin: None,
+            time: 0.0,
+            scaleX: 1.0,
+            scaleY: 1.0,
+            x: 0.0,
+            y: 0.0
+        };
+
+        return i;
+    }
+}
