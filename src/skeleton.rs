@@ -18,5 +18,9 @@ pub struct Skeleton<'a> {
     color: Color,
     drawOrder: Vec<Slot<'a>>,
     skin: Option<&'a Skin<'a>>,
-
+    pub(crate) time: f32,
+    scaleX: f32,
+    scaleY: f32,
+    x: f32,
+    y: f32,
 }

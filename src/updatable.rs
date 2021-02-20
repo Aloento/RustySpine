@@ -1,3 +1,3 @@
 pub trait Updatable {
-    fn update();
+    fn update(&self);
 }

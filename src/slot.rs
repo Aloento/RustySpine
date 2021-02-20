@@ -15,7 +15,7 @@ pub struct Slot<'a> {
 }
 
 impl<'a> Slot<'a> {
-    pub fn new(data: &SlotData, bone: &Bone) -> Self {
+    pub fn new(data: &'a SlotData, bone: &'a Bone) -> Self {
         Slot {
             data,
             bone,
@@ -32,7 +32,7 @@ impl<'a> Slot<'a> {
     }
 
     pub fn set_attachment(&mut self, attachment: &'a Attachment) {
-        if self.attachment == attachment { return; }
+        if self.attachment.unwrap() == attachment { return; }
         self.attachment = Some(attachment);
         self.attachmentTime = self.bone.skeleton.time;
         self.deform.clear();
