@@ -9,11 +9,13 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Bone!">
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Slot!">
+      <change afterPath="$PROJECT_DIR$/src/ik_constraint.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/path_constraint.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transform_constraint.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bone.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bone.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slot.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/slot.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slot_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/slot_data.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skeleton.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +130,7 @@
       <workItem from="1613743757098" duration="6410000" />
       <workItem from="1613750790374" duration="7741000" />
       <workItem from="1613829047440" duration="54000" />
-      <workItem from="1613829112224" duration="4739000" />
+      <workItem from="1613829112224" duration="5765000" />
     </task>
     <task id="LOCAL-00001" summary="Rust">
       <created>1613380844867</created>
@@ -410,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613834147830</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Slot!">
+      <created>1613834884487</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1613834884487</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +455,8 @@
     <MESSAGE value="和借阅检查器打架" />
     <MESSAGE value="不知道咋整了" />
     <MESSAGE value="Bone!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bone!" />
+    <MESSAGE value="Slot!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Slot!" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

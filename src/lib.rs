@@ -21,6 +21,9 @@ mod transform_constraint_data;
 mod utils;
 mod bone;
 mod updatable;
+mod ik_constraint;
+mod transform_constraint;
+mod path_constraint;
 
 #[cfg(test)]
 mod tests {
