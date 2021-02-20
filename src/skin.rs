@@ -45,11 +45,7 @@ impl<'a> Skin<'a> {
         }
     }
 
-    pub fn get_attachment<'b: 'a>(
-        &'b self,
-        slotIndex: i32,
-        name: &String,
-    ) -> Option<&'a Attachment> {
+    pub fn get_attachment<'b: 'a>(&'b self, slotIndex: i32, name: &String) -> Option<&'a Attachment> {
         let mut lookup: SkinEntry = SkinEntry::new();
         lookup.set(slotIndex, name.clone());
         let entry = self.attachments.get(&lookup);

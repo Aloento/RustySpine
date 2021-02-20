@@ -17,5 +17,6 @@ pub struct Skeleton<'a> {
     updateCacheReset: Vec<&'a Bone<'a>>,
     color: Color,
     drawOrder: Vec<Slot<'a>>,
-    skin: Skin
+    skin: Option<&'a Skin<'a>>,
+
 }
