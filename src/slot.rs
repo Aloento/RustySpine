@@ -1,14 +1,40 @@
 use crate::attachments::attachment::Attachment;
+use crate::slot_data::SlotData;
+use crate::bone::Bone;
+use crate::utils::color::Color;
 
 pub struct Slot<'a> {
-    pub(crate) attachment: &'a Attachment,
+    data: &'a SlotData<'a>,
+    bone: &'a Bone<'a>,
+    color: Color,
+    darkColor: Option<Color>,
+    pub(crate) attachment: Option<&'a Attachment>,
+    attachmentState: i32,
+    attachmentTime: f32,
+    deform: Vec<f32>,
 }
 
 impl<'a> Slot<'a> {
-    pub fn set_attachment(&mut self, attachment: &'a Attachment) {
-        if self.attachment == attachment {
-            return;
+    pub fn new(data: &SlotData, bone: &Bone) -> Self {
+        Slot {
+            data,
+            bone,
+            color: Default::default(),
+            darkColor: match data.darkColor {
+                None => None,
+                Some(_) => Default::default(),
+            },
+            attachment: None,
+            attachmentState: 0,
+            attachmentTime: 0.0,
+            deform: vec![]
         }
-        self.attachment = attachment;
+    }
+
+    pub fn set_attachment(&mut self, attachment: &'a Attachment) {
+        if self.attachment == attachment { return; }
+        self.attachment = Some(attachment);
+        self.attachmentTime = self.bone.skeleton.time;
+        self.deform.clear();
     }
 }

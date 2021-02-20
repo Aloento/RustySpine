@@ -19,6 +19,8 @@ mod slot;
 mod slot_data;
 mod transform_constraint_data;
 mod utils;
+mod bone;
+mod updatable;
 
 #[cfg(test)]
 mod tests {

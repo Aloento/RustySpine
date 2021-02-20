@@ -63,17 +63,22 @@ impl<'a> Skin<'a> {
         for entry in oldSkin.attachments.keys() {
             let slotIndex = entry.slotIndex;
             let slot = skeleton.slots.get_mut(slotIndex as usize).unwrap();
-            if slot.attachment == &entry.attachment {
-                let mut lookup: SkinEntry = SkinEntry::new();
-                lookup.set(slotIndex, entry.name.clone());
-                let entry = self.attachments.get(&lookup);
-                match entry {
-                    Some(entry) => {
-                        let attachment = &entry.attachment;
-                        slot.attachment = attachment;
+            match slot.attachment {
+                Some(slot_attachment) => {
+                    if slot_attachment == &entry.attachment {
+                        let mut lookup: SkinEntry = SkinEntry::new();
+                        lookup.set(slotIndex, entry.name.clone());
+                        let entry = self.attachments.get(&lookup);
+                        match entry {
+                            Some(entry) => {
+                                let attachment = &entry.attachment;
+                                slot.attachment = Some(attachment);
+                            }
+                            None => {}
+                        }
                     }
-                    None => {}
                 }
+                None => {}
             }
         }
     }

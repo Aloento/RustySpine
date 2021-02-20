@@ -9,15 +9,11 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="不知道咋整了">
-      <change beforePath="$PROJECT_DIR$/src/attachments/attachment.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/attachment.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/path_constraint_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/path_constraint_data.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skeleton_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_data.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skin.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skin.rs" afterDir="false" />
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Bone!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bone.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bone.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/slot.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/slot.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/linked_mesh.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/linked_mesh.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slot_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/slot_data.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +127,8 @@
       <workItem from="1613729263852" duration="11594000" />
       <workItem from="1613743757098" duration="6410000" />
       <workItem from="1613750790374" duration="7741000" />
+      <workItem from="1613829047440" duration="54000" />
+      <workItem from="1613829112224" duration="4739000" />
     </task>
     <task id="LOCAL-00001" summary="Rust">
       <created>1613380844867</created>
@@ -398,7 +396,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613769579376</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="不知道咋整了">
+      <created>1613769693453</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1613769693453</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Bone!">
+      <created>1613834147830</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1613834147830</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +445,8 @@
     <MESSAGE value="&amp;mut Slot&lt;'_&gt;" />
     <MESSAGE value="和借阅检查器打架" />
     <MESSAGE value="不知道咋整了" />
-    <option name="LAST_COMMIT_MESSAGE" value="不知道咋整了" />
+    <MESSAGE value="Bone!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bone!" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

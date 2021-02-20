@@ -7,7 +7,7 @@ pub struct SlotData<'a> {
     pub(crate) name: String,
     boneData: &'a BoneData<'a>,
     color: Color,
-    darkColor: Color,
+    pub(crate) darkColor: Option<Color>,
     attachmentName: String,
     blendMode: BlendMode,
 }
@@ -24,7 +24,7 @@ impl<'a> SlotData<'a> {
                 b: 1.0,
                 a: 1.0,
             },
-            darkColor: Default::default(),
+            darkColor: None,
             attachmentName: "".to_string(),
             blendMode: BlendMode::Normal,
         }
