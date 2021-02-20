@@ -4,8 +4,8 @@ use crate::updatable::Updatable;
 
 pub struct IkConstraint<'a> {
     data: &'a IkConstraintData<'a>,
-    bones: Vec<&'a Bone<'a>>,
-    target: &'a Bone<'a>,
+    bones: Vec<Option<&'a Bone<'a>>>,
+    target: Option<&'a Bone<'a>>,
     bendDirection: i32,
     compress: bool,
     stretch: bool,

@@ -1,11 +1,24 @@
 use crate::updatable::Updatable;
+use crate::transform_constraint_data::TransformConstraintData;
+use crate::bone::Bone;
 
-pub struct TransformConstraint {
-
+pub struct TransformConstraint<'a> {
+    data: &'a TransformConstraintData<'a>,
+    bones: Vec<Option<&'a Bone<'a>>>,
+    target: Option<&'a Bone<'a>>,
+    rotateMix: f32,
+    translateMix: f32,
+    scaleMix: f32,
+    shearMix: f32,
+    active: bool,
 }
 
-impl Updatable for TransformConstraint {
+impl<'a> Updatable for TransformConstraint<'a> {
     fn update(&self) {
         unimplemented!()
     }
+}
+
+impl<'a> TransformConstraint<'a> {
+
 }
