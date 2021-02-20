@@ -1,6 +1,6 @@
 use crate::attachments::attachment::Attachment;
-use crate::slot_data::SlotData;
 use crate::bone::Bone;
+use crate::slot_data::SlotData;
 use crate::utils::color::Color;
 
 pub struct Slot<'a> {
@@ -27,7 +27,7 @@ impl<'a> Slot<'a> {
             attachment: None,
             attachmentState: 0,
             attachmentTime: 0.0,
-            deform: vec![]
+            deform: vec![],
         }
     }
 

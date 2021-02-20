@@ -1,12 +1,12 @@
-use crate::slot::Slot;
-use crate::skeleton_data::SkeletonData;
 use crate::bone::Bone;
 use crate::ik_constraint::IkConstraint;
 use crate::path_constraint::PathConstraint;
+use crate::skeleton_data::SkeletonData;
+use crate::skin::Skin;
+use crate::slot::Slot;
+use crate::transform_constraint::TransformConstraint;
 use crate::updatable::Updatable;
 use crate::utils::color::Color;
-use crate::skin::Skin;
-use crate::transform_constraint::TransformConstraint;
 
 pub struct Skeleton<'a> {
     data: SkeletonData<'a>,
@@ -38,11 +38,11 @@ impl<'a> Skeleton<'a> {
             pathConstraints: Vec::with_capacity(data.pathConstraints.len()),
             updateCache: vec![],
             updateCacheReset: vec![],
-            color: Color{
+            color: Color {
                 r: 1.0,
                 g: 1.0,
                 b: 1.0,
-                a: 1.0
+                a: 1.0,
             },
             drawOrder: Vec::with_capacity(data.slots.len()),
             skin: None,
@@ -50,7 +50,7 @@ impl<'a> Skeleton<'a> {
             scaleX: 1.0,
             scaleY: 1.0,
             x: 0.0,
-            y: 0.0
+            y: 0.0,
         };
 
         return i;

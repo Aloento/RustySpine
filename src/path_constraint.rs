@@ -1,7 +1,7 @@
-use crate::updatable::Updatable;
-use crate::path_constraint_data::PathConstraintData;
 use crate::bone::Bone;
+use crate::path_constraint_data::PathConstraintData;
 use crate::slot::Slot;
+use crate::updatable::Updatable;
 
 const NONE: i8 = -1;
 const BEFORE: i8 = -2;

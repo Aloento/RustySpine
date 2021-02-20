@@ -1,6 +1,6 @@
-use crate::updatable::Updatable;
-use crate::transform_constraint_data::TransformConstraintData;
 use crate::bone::Bone;
+use crate::transform_constraint_data::TransformConstraintData;
+use crate::updatable::Updatable;
 
 pub struct TransformConstraint<'a> {
     data: &'a TransformConstraintData<'a>,
@@ -19,6 +19,4 @@ impl<'a> Updatable for TransformConstraint<'a> {
     }
 }
 
-impl<'a> TransformConstraint<'a> {
-
-}
+impl<'a> TransformConstraint<'a> {}

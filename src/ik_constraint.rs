@@ -20,6 +20,4 @@ impl<'a> Updatable for IkConstraint<'a> {
     }
 }
 
-impl<'a> IkConstraint<'a> {
-
-}
+impl<'a> IkConstraint<'a> {}
