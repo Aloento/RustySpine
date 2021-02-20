@@ -1,5 +1,6 @@
 use crate::bone_data::BoneData;
 use crate::skeleton::Skeleton;
+use crate::updatable::Updatable;
 
 pub struct Bone<'a> {
     data: &'a BoneData<'a>,
@@ -29,6 +30,12 @@ pub struct Bone<'a> {
     c: f32,
     d: f32,
     worldY: f32,
+}
+
+impl<'a> Updatable for Bone<'a> {
+    fn update(&self) {
+        unimplemented!()
+    }
 }
 
 impl<'a> Bone<'a> {

@@ -27,12 +27,7 @@ impl<'a> Skin<'a> {
         }
     }
 
-    pub fn set_attachment<'b: 'a>(
-        &'b mut self,
-        slotIndex: i32,
-        name: String,
-        attachment: Attachment,
-    ) {
+    pub fn set_attachment<'b: 'a>(&'b mut self, slotIndex: i32, name: String, attachment: Attachment) {
         let newEntry = SkinEntry::with(slotIndex, name, attachment);
         let oldEntry = self.attachments.get_mut(&newEntry);
         match oldEntry {
@@ -55,7 +50,7 @@ impl<'a> Skin<'a> {
         }
     }
 
-    fn attachAll<'b: 'a>(&'b mut self, skeleton: &mut Skeleton<'a>, oldSkin: &Skin) {
+    fn attach_all<'b: 'a>(&'b mut self, skeleton: &mut Skeleton<'a>, oldSkin: &Skin) {
         for entry in oldSkin.attachments.keys() {
             let slotIndex = entry.slotIndex;
             let slot = skeleton.slots.get_mut(slotIndex as usize).unwrap();
