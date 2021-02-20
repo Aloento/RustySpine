@@ -12,7 +12,6 @@ pub struct Skin<'a> {
     attachments: HashMap<SkinEntry, SkinEntry>,
     bones: Vec<&'a BoneData<'a>>,
     constraints: Vec<&'a ConstraintData>,
-    lookup: SkinEntry,
 }
 
 impl<'a> Skin<'a> {
@@ -25,13 +24,17 @@ impl<'a> Skin<'a> {
             attachments: HashMap::default(),
             bones: vec![],
             constraints: vec![],
-            lookup: SkinEntry::new(),
         }
     }
 
-    pub fn set_attachment(&mut self, slotIndex: i32, name: String, attachment: Attachment) {
-        let mut newEntry = SkinEntry::with(slotIndex, name, attachment);
-        let mut oldEntry = self.attachments.get_mut(&newEntry);
+    pub fn set_attachment<'b: 'a>(
+        &'b mut self,
+        slotIndex: i32,
+        name: String,
+        attachment: Attachment,
+    ) {
+        let newEntry = SkinEntry::with(slotIndex, name, attachment);
+        let oldEntry = self.attachments.get_mut(&newEntry);
         match oldEntry {
             None => {
                 self.attachments.insert(newEntry.clone(), newEntry);
@@ -42,27 +45,40 @@ impl<'a> Skin<'a> {
         }
     }
 
-    pub fn get_attachment(&mut self, slotIndex: i32, name: &String) -> Option<&Attachment> {
-        self.lookup.set(slotIndex, name.clone());
-        let entry = self.attachments.get(&self.lookup);
+    pub fn get_attachment<'b: 'a>(
+        &'b self,
+        slotIndex: i32,
+        name: &String,
+    ) -> Option<&'a Attachment> {
+        let mut lookup: SkinEntry = SkinEntry::new();
+        lookup.set(slotIndex, name.clone());
+        let entry = self.attachments.get(&lookup);
         match entry {
             None => None,
             Some(entry) => Some(&entry.attachment),
         }
     }
 
-    fn attachAll(&mut self, skeleton: &mut Skeleton<'a>, oldSkin: &Skin) {
+    fn attachAll<'b: 'a>(&'b mut self, skeleton: &mut Skeleton<'a>, oldSkin: &Skin) {
         for entry in oldSkin.attachments.keys() {
             let slotIndex = entry.slotIndex;
             let slot = skeleton.slots.get_mut(slotIndex as usize).unwrap();
-            if slot.attachment == &entry.attachment {
-                let attachment = self.get_attachment(slotIndex, &entry.name);
-                match attachment {
-                    None => {}
-                    Some(attachment) => {
-                        slot.attachment = attachment;
+            match slot.attachment {
+                Some(slot_attachment) => {
+                    if slot_attachment == &entry.attachment {
+                        let mut lookup: SkinEntry = SkinEntry::new();
+                        lookup.set(slotIndex, entry.name.clone());
+                        let entry = self.attachments.get(&lookup);
+                        match entry {
+                            Some(entry) => {
+                                let attachment = &entry.attachment;
+                                slot.attachment = Some(attachment);
+                            }
+                            None => {}
+                        }
                     }
                 }
+                None => {}
             }
         }
     }
