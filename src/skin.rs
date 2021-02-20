@@ -42,7 +42,7 @@ impl<'a> Skin<'a> {
         }
     }
 
-    pub fn get_attachment(&'_ mut self, slotIndex: i32, name: &String) -> Option<&'_ Attachment> {
+    pub fn get_attachment(&mut self, slotIndex: i32, name: &String) -> Option<&Attachment> {
         self.lookup.set(slotIndex, name.clone());
         let entry = self.attachments.get(&self.lookup);
         match entry {
@@ -51,7 +51,7 @@ impl<'a> Skin<'a> {
         }
     }
 
-    fn attachAll(&'_ mut self, skeleton: &mut Skeleton<'a>, oldSkin: &Skin) {
+    fn attachAll(&mut self, skeleton: &mut Skeleton<'a>, oldSkin: &Skin) {
         for entry in oldSkin.attachments.keys() {
             let slotIndex = entry.slotIndex;
             let slot = skeleton.slots.get_mut(slotIndex as usize).unwrap();

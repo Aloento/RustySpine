@@ -1,6 +1,10 @@
 use crate::attachments::attachment::Attachment;
+use crate::slot_data::SlotData;
 
 pub struct Slot<'a> {
+    data: &'a SlotData<'a>,
+    bone: &'a Bone<'a>,
+
     pub(crate) attachment: &'a Attachment,
 }
 
