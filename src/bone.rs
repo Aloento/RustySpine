@@ -32,7 +32,7 @@ pub struct Bone<'a> {
 }
 
 impl<'a> Bone<'a> {
-    pub fn new(data: &BoneData, skeleton: &Skeleton, parent: Option<&Bone>) -> Self {
+    pub fn new(data: &'a BoneData, skeleton: &'a Skeleton, parent: Option<&'a Bone>) -> Self {
         let mut i = Bone {
             data,
             skeleton,
