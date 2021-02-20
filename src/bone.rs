@@ -3,7 +3,7 @@ use crate::skeleton::Skeleton;
 
 pub struct Bone<'a> {
     data: &'a BoneData<'a>,
-    skeleton: &'a Skeleton<'a>,
+    pub(crate) skeleton: &'a Skeleton<'a>,
     parent: Option<&'a Bone<'a>>,
     children: Vec<Bone<'a>>,
     appliedValid: bool,
@@ -32,7 +32,7 @@ pub struct Bone<'a> {
 }
 
 impl<'a> Bone<'a> {
-    pub fn withBone(data: &BoneData, skeleton: &Skeleton, parent: Option<&Bone>) -> Self {
+    pub fn new(data: &BoneData, skeleton: &Skeleton, parent: Option<&Bone>) -> Self {
         let mut i = Bone {
             data,
             skeleton,
