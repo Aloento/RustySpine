@@ -6,7 +6,7 @@ pub struct Bone<'a> {
     data: &'a BoneData<'a>,
     pub(crate) skeleton: &'a Skeleton<'a>,
     parent: Option<&'a Bone<'a>>,
-    children: Vec<Bone<'a>>,
+    pub(crate) children: Vec<&'a Bone<'a>>,
     appliedValid: bool,
     sorted: bool,
     active: bool,
@@ -39,7 +39,7 @@ impl<'a> Updatable for Bone<'a> {
 }
 
 impl<'a> Bone<'a> {
-    pub fn new(data: &'a BoneData, skeleton: &'a Skeleton, parent: Option<&'a Bone>) -> Self {
+    pub fn new(data: &'a BoneData, skeleton: &'a Skeleton<'a>, parent: Option<&'a Bone<'a>>) -> Self {
         let mut i = Bone {
             data,
             skeleton,

@@ -7,6 +7,7 @@ use crate::slot::Slot;
 use crate::transform_constraint::TransformConstraint;
 use crate::updatable::Updatable;
 use crate::utils::color::Color;
+use std::borrow::Borrow;
 
 pub struct Skeleton<'a> {
     data: SkeletonData<'a>,
@@ -28,9 +29,8 @@ pub struct Skeleton<'a> {
 }
 
 impl<'a> Skeleton<'a> {
-    pub fn new(data: SkeletonData) -> Self {
+    pub fn new(data: SkeletonData<'a>) -> Self {
         let mut i = Self {
-            data,
             bones: Vec::with_capacity(data.bones.len()),
             slots: Vec::with_capacity(data.slots.len()),
             ikConstraints: Vec::with_capacity(data.ikConstraints.len()),
@@ -51,8 +51,20 @@ impl<'a> Skeleton<'a> {
             scaleY: 1.0,
             x: 0.0,
             y: 0.0,
+            data,
         };
 
+        for boneData in &i.data.bones {
+            let bone;
+            if boneData.parent.is_none() {
+                bone = Bone::new(boneData, &i, None);
+            } else {
+                let mut parent = i.bones.get_mut(boneData.parent.unwrap().index as usize);
+                parent.unwrap().children.push(&bone);
+                bone = Bone::new(boneData, &i, parent.as_deref());
+            }
+            i.bones.push(bone);
+        }
         return i;
     }
 }

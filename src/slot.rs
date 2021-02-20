@@ -15,7 +15,7 @@ pub struct Slot<'a> {
 }
 
 impl<'a> Slot<'a> {
-    pub fn new(data: &'a SlotData, bone: &'a Bone) -> Self {
+    pub fn new(data: &'a SlotData, bone: &'a Bone<'a>) -> Self {
         Slot {
             data,
             bone,
