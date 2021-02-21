@@ -1,16 +1,16 @@
 use crate::attachments::mesh_attachment::MeshAttachment;
 
-pub struct LinkedMesh<'m> {
+pub struct LinkedMesh<'a> {
     parent: String,
     skin: String,
     slot_index: i32,
-    mesh: &'m MeshAttachment,
+    mesh: &'a MeshAttachment<'a>,
     inherit_deform: bool,
 }
 
-impl<'m> LinkedMesh<'m> {
+impl<'a> LinkedMesh<'a> {
     fn new(
-        mesh: &'m MeshAttachment,
+        mesh: &'a MeshAttachment,
         skin: String,
         slot_index: i32,
         parent: String,
