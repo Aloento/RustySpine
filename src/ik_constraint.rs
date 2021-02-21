@@ -25,15 +25,15 @@ impl<'a> IkConstraint<'a> {
     pub fn new(data: &'a IkConstraintData<'a>, skeleton: &'a Skeleton<'a>) -> Self {
         let mut i = Self {
             bones: Vec::with_capacity(data.bones.len()),
-            target: skeleton.findBone(data.target.unwrap().name),
+            target: Some(skeleton.findBone(data.target.unwrap().name)),
             bendDirection: data.bendDirection,
             compress: data.compress,
             stretch: data.stretch,
             mix: data.mix,
             softness: data.softness,
-            active: false
+            active: false,
             data,
-        }
+        };
 
         for boneData in i.data.bones {
             i.bones.push(skeleton.findBone(boneData.name));

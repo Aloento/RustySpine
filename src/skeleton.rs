@@ -74,7 +74,15 @@ impl<'a> Skeleton<'a> {
         }
 
         for ikConstraintData in &i.data.ikConstraints {
-            i.ikConstraints.push()
+            i.ikConstraints.push(IkConstraint::new(ikConstraintData, &i));
+        }
+
+        for transformConstraintData in &i.data.transformConstraints {
+            i.transformConstraints.push(TransformConstraint::new(transformConstraintData, &i));
+        }
+
+        for pathConstraintData in &i.data.pathConstraints {
+            i.pathConstraints.push(PathConstraint::new(pathConstraintData, &i));
         }
 
         return i;

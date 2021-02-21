@@ -1,6 +1,7 @@
 use crate::bone::Bone;
 use crate::transform_constraint_data::TransformConstraintData;
 use crate::updatable::Updatable;
+use crate::skeleton::Skeleton;
 
 pub struct TransformConstraint<'a> {
     data: &'a TransformConstraintData<'a>,
@@ -19,4 +20,23 @@ impl<'a> Updatable for TransformConstraint<'a> {
     }
 }
 
-impl<'a> TransformConstraint<'a> {}
+impl<'a> TransformConstraint<'a> {
+    pub fn new(data: &'a TransformConstraintData<'a>, skeleton: &'a Skeleton<'a>) -> Self {
+        let mut i = Self {
+            bones: Vec::with_capacity(data.bones.len()),
+            target: Some(skeleton.findBone(data.target.unwrap().name)),
+            rotateMix: data.rotateMix,
+            translateMix: data.translateMix,
+            scaleMix: data.scaleMix,
+            shearMix: data.shearMix,
+            active: false,
+            data,
+        };
+
+        for boneData in i.data.bones {
+            i.bones.push(skeleton.findBone(boneData.name))
+        }
+
+        return i;
+    }
+}

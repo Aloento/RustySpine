@@ -3,12 +3,12 @@ use crate::constraint_data::ConstraintData;
 
 pub struct TransformConstraintData<'a> {
     data: ConstraintData,
-    bones: Vec<&'a BoneData<'a>>,
-    target: Option<&'a BoneData<'a>>,
-    rotateMix: f32,
-    translateMix: f32,
-    scaleMix: f32,
-    shearMix: f32,
+    pub(crate) bones: Vec<&'a BoneData<'a>>,
+    pub(crate) target: Option<&'a BoneData<'a>>,
+    pub(crate) rotateMix: f32,
+    pub(crate) translateMix: f32,
+    pub(crate) scaleMix: f32,
+    pub(crate) shearMix: f32,
     offsetRotation: f32,
     offsetX: f32,
     offsetY: f32,

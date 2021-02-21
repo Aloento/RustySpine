@@ -4,16 +4,16 @@ use crate::slot_data::SlotData;
 
 pub struct PathConstraintData<'a> {
     data: ConstraintData,
-    bones: Vec<&'a BoneData<'a>>,
-    target: Option<&'a SlotData<'a>>,
+    pub(crate) bones: Vec<&'a BoneData<'a>>,
+    pub(crate) target: Option<&'a SlotData<'a>>,
     positionMode: PositionMode,
     spacingMode: SpacingMode,
     rotateMode: RotateMode,
     offsetRotation: f32,
-    position: f32,
-    spacing: f32,
-    rotateMix: f32,
-    translateMix: f32,
+    pub(crate) position: f32,
+    pub(crate) spacing: f32,
+    pub(crate) rotateMix: f32,
+    pub(crate) translateMix: f32,
 }
 
 impl<'a> PathConstraintData<'a> {
