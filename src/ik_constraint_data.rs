@@ -3,14 +3,14 @@ use crate::constraint_data::ConstraintData;
 
 pub struct IkConstraintData<'a> {
     data: ConstraintData,
-    bones: Vec<&'a BoneData<'a>>,
-    target: Option<&'a BoneData<'a>>,
-    bendDirection: i32,
-    compress: bool,
-    stretch: bool,
+    pub(crate) bones: Vec<&'a BoneData<'a>>,
+    pub(crate) target: Option<&'a BoneData<'a>>,
+    pub(crate) bendDirection: i32,
+    pub(crate) compress: bool,
+    pub(crate) stretch: bool,
     uniform: bool,
-    mix: f32,
-    softness: f32,
+    pub(crate) mix: f32,
+    pub(crate) softness: f32,
 }
 
 impl<'a> IkConstraintData<'a> {

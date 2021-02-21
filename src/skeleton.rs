@@ -19,7 +19,7 @@ pub struct Skeleton<'a> {
     updateCache: Vec<Box<dyn Updatable>>,
     updateCacheReset: Vec<&'a Bone<'a>>,
     color: Color,
-    drawOrder: Vec<Slot<'a>>,
+    drawOrder: Vec<&'a Slot<'a>>,
     skin: Option<&'a Skin<'a>>,
     pub(crate) time: f32,
     scaleX: f32,
@@ -65,6 +65,18 @@ impl<'a> Skeleton<'a> {
             }
             i.bones.push(bone);
         }
+
+        for slotData in &i.data.slots {
+            let bone = i.bones.get(slotData.boneData.index as usize);
+            let slot = Slot::new(slotData, bone.unwrap());
+            i.slots.push(slot);
+            i.drawOrder.push(&slot);
+        }
+
+        for ikConstraintData in &i.data.ikConstraints {
+            i.ikConstraints.push()
+        }
+
         return i;
     }
 }

@@ -5,7 +5,7 @@ use crate::utils::color::Color;
 pub struct SlotData<'a> {
     index: i32,
     pub(crate) name: String,
-    boneData: &'a BoneData<'a>,
+    pub(crate) boneData: &'a BoneData<'a>,
     color: Color,
     pub(crate) darkColor: Option<Color>,
     attachmentName: String,

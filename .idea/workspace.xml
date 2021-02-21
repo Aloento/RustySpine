@@ -9,12 +9,12 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Skeleton">
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="继续渡劫">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bone.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bone.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bone_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/bone_data.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ik_constraint.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ik_constraint.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ik_constraint_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ik_constraint_data.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/skeleton.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/slot.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/slot.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slot_data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/slot_data.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,11 +94,6 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Cargo.Test tests::it_works" />
@@ -129,14 +124,8 @@
       <workItem from="1613743757098" duration="6410000" />
       <workItem from="1613750790374" duration="7741000" />
       <workItem from="1613829047440" duration="54000" />
-      <workItem from="1613829112224" duration="17242000" />
-    </task>
-    <task id="LOCAL-00001" summary="Rust">
-      <created>1613380844867</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1613380844867</updated>
+      <workItem from="1613829112224" duration="17854000" />
+      <workItem from="1613904850233" duration="926000" />
     </task>
     <task id="LOCAL-00002" summary="Rust">
       <created>1613386105635</created>
@@ -474,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613855764154</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="继续渡劫">
+      <created>1613859945965</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1613859945966</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +510,8 @@
     <MESSAGE value="Updatable" />
     <MESSAGE value="PathConstraint" />
     <MESSAGE value="Skeleton" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skeleton" />
+    <MESSAGE value="继续渡劫" />
+    <option name="LAST_COMMIT_MESSAGE" value="继续渡劫" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
