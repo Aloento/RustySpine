@@ -1,7 +1,8 @@
-use crate::animation_state_data::AnimationStateData;
-use crate::animation::{Animation, MixBlend};
-use crate::event::Event;
 use object_pool::Pool;
+
+use crate::animation::{Animation, MixBlend};
+use crate::animation_state_data::AnimationStateData;
+use crate::event::Event;
 
 const SUBSEQUENT: i32 = 0;
 const FIRST: i32 = 1;
@@ -37,7 +38,7 @@ impl<'a> AnimationState<'a> {
             animationsChanged: false,
             data,
             timeScale: -1.0,
-            unkeyedState: 0
+            unkeyedState: 0,
         }
     }
 }
@@ -107,7 +108,7 @@ impl TrackEntry {
             mixDuration: 0.0,
             interruptAlpha: 0.0,
             totalAlpha: 0.0,
-            mixBlend: MixBlend::Replace
+            mixBlend: MixBlend::Replace,
         }
     }
 
@@ -137,6 +138,4 @@ pub trait AnimationStateListener {
     fn endInt(trackIndex: i32);
 }
 
-struct EventQueue {
-
-}
+struct EventQueue {}

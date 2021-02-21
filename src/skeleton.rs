@@ -1,3 +1,5 @@
+use std::borrow::Borrow;
+
 use crate::bone::Bone;
 use crate::ik_constraint::IkConstraint;
 use crate::path_constraint::PathConstraint;
@@ -7,7 +9,6 @@ use crate::slot::Slot;
 use crate::transform_constraint::TransformConstraint;
 use crate::updatable::Updatable;
 use crate::utils::color::Color;
-use std::borrow::Borrow;
 
 pub struct Skeleton<'a> {
     data: SkeletonData<'a>,

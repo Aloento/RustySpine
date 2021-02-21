@@ -1,7 +1,7 @@
 use crate::bone::Bone;
 use crate::ik_constraint_data::IkConstraintData;
-use crate::updatable::Updatable;
 use crate::skeleton::Skeleton;
+use crate::updatable::Updatable;
 
 pub struct IkConstraint<'a> {
     data: &'a IkConstraintData<'a>,

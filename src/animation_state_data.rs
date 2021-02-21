@@ -1,6 +1,7 @@
-use crate::skeleton_data::SkeletonData;
 use std::collections::HashMap;
+
 use crate::animation::Animation;
+use crate::skeleton_data::SkeletonData;
 
 pub struct AnimationStateData<'a> {
     skeletonData: &'a SkeletonData<'a>,
@@ -15,7 +16,7 @@ impl<'a> AnimationStateData<'a> {
             skeletonData,
             animationToMixTime: Default::default(),
             tempKey: Key::new(),
-            defaultMix: 0.0
+            defaultMix: 0.0,
         }
     }
 }
@@ -29,7 +30,7 @@ impl<'a> Key<'a> {
     pub fn new() -> Self {
         Self {
             a1: None,
-            a2: None
+            a2: None,
         }
     }
 }

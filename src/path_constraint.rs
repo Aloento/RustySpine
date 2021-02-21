@@ -1,8 +1,8 @@
 use crate::bone::Bone;
 use crate::path_constraint_data::PathConstraintData;
+use crate::skeleton::Skeleton;
 use crate::slot::Slot;
 use crate::updatable::Updatable;
-use crate::skeleton::Skeleton;
 
 const NONE: i8 = -1;
 const BEFORE: i8 = -2;
@@ -54,7 +54,7 @@ impl<'a> PathConstraint<'a> {
         for boneData in i.data.bones {
             i.bones.push(skeleton.findBone(&boneData.name));
         }
-        
+
         return i;
     }
 }

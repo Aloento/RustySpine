@@ -17,6 +17,15 @@ impl Default for Color {
 }
 
 impl Color {
+    pub fn new() -> Self {
+        Self {
+            r: 1.0,
+            g: 1.0,
+            b: 1.0,
+            a: 1.0,
+        }
+    }
+
     pub fn rgba8888to_color(&mut self, value: i32) {
         self.r = (((value as u32 & 0xff000000) >> 24) / 255) as f32;
         self.g = (((value as u32 & 0x00ff0000) >> 16) / 255) as f32;

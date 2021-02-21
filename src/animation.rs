@@ -16,7 +16,7 @@ impl Animation {
             name,
             timelines,
             timelineIDs: Default::default(),
-            duration
+            duration,
         };
         i.setTimelines();
         return i;

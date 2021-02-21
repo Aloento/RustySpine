@@ -1,7 +1,7 @@
 use crate::bone::Bone;
+use crate::skeleton::Skeleton;
 use crate::transform_constraint_data::TransformConstraintData;
 use crate::updatable::Updatable;
-use crate::skeleton::Skeleton;
 
 pub struct TransformConstraint<'a> {
     data: &'a TransformConstraintData<'a>,

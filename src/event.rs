@@ -19,7 +19,7 @@ impl<'a> Event<'a> {
             floatValue: 0.0,
             stringValue: "".to_string(),
             volume: 0.0,
-            balance: 0.0
+            balance: 0.0,
         }
     }
 }

@@ -7,3 +7,5 @@ pub mod mesh_attachment;
 pub mod path_attachment;
 pub mod point_attachment;
 pub mod region_attachment;
+pub mod vertex_attachment;
+pub mod texture_region;
