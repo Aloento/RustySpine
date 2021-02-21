@@ -12,12 +12,34 @@ const CURRENT: i32 = 2;
 
 pub struct AnimationState<'a> {
     emptyAnimation: Animation,
-    data: AnimationStateData<'a>,
     tracks: Vec<TrackEntry<'a>>,
     listeners: Vec<Box<dyn AnimationStateListener>>,
-    trackEntryPool: Pool<&'a TrackEntry<'a>>,
+    trackEntryPool: Pool<TrackEntry<'a>>,
     events: Vec<Event>,
-    queue:
+    queue: EventQueue,
+    propertyIDs: Vec<i32>,
+    animationsChanged: bool,
+    data: AnimationStateData<'a>,
+    timeScale: f32,
+    unkeyedState: i32,
+}
+
+impl<'a> AnimationState<'a> {
+    pub fn new(data: AnimationStateData) -> Self {
+        Self {
+            emptyAnimation: Animation::new("<empty>".to_string(), Vec::with_capacity(0), 0.0),
+            tracks: vec![],
+            listeners: vec![],
+            trackEntryPool: Pool::new(32, TrackEntry::new()),
+            events: vec![],
+            queue: EventQueue {},
+            propertyIDs: vec![],
+            animationsChanged: false,
+            data,
+            timeScale: 0.0,
+            unkeyedState: 0
+        }
+    }
 }
 
 pub struct TrackEntry<'a> {
@@ -51,6 +73,43 @@ pub struct TrackEntry<'a> {
     interruptAlpha: f32,
     totalAlpha: f32,
     mixBlend: MixBlend,
+}
+
+impl TrackEntry {
+    pub fn new() -> Self {
+        Self {
+            timelineMode: vec![],
+            timelineHoldMix: vec![],
+            timelinesRotation: vec![],
+            animation: None,
+            next: None,
+            mixingFrom: None,
+            mixingTo: None,
+            listener: (),
+            trackIndex: 0,
+            Loop: false,
+            holdPrevious: false,
+            eventThreshold: 0.0,
+            attachmentThreshold: 0.0,
+            drawOrderThreshold: 0.0,
+            animationStart: 0.0,
+            animationEnd: 0.0,
+            animationLast: 0.0,
+            nextAnimationLast: 0.0,
+            delay: 0.0,
+            trackTime: 0.0,
+            trackLast: 0.0,
+            nextTrackLast: 0.0,
+            trackEnd: 0.0,
+            timeScale: 0.0,
+            alpha: 0.0,
+            mixTime: 0.0,
+            mixDuration: 0.0,
+            interruptAlpha: 0.0,
+            totalAlpha: 0.0,
+            mixBlend: MixBlend::Replace
+        }
+    }
 }
 
 pub trait AnimationStateListener {
