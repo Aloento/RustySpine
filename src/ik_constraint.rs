@@ -25,7 +25,7 @@ impl<'a> IkConstraint<'a> {
     pub fn new(data: &'a IkConstraintData<'a>, skeleton: &'a Skeleton<'a>) -> Self {
         let mut i = Self {
             bones: Vec::with_capacity(data.bones.len()),
-            target: Some(skeleton.findBone(data.target.unwrap().name)),
+            target: Some(skeleton.findBone(&data.target.unwrap().name)),
             bendDirection: data.bendDirection,
             compress: data.compress,
             stretch: data.stretch,
@@ -36,7 +36,7 @@ impl<'a> IkConstraint<'a> {
         };
 
         for boneData in i.data.bones {
-            i.bones.push(skeleton.findBone(boneData.name));
+            i.bones.push(skeleton.findBone(&boneData.name));
         }
 
         return i;

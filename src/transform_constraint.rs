@@ -24,7 +24,7 @@ impl<'a> TransformConstraint<'a> {
     pub fn new(data: &'a TransformConstraintData<'a>, skeleton: &'a Skeleton<'a>) -> Self {
         let mut i = Self {
             bones: Vec::with_capacity(data.bones.len()),
-            target: Some(skeleton.findBone(data.target.unwrap().name)),
+            target: Some(skeleton.findBone(&data.target.unwrap().name)),
             rotateMix: data.rotateMix,
             translateMix: data.translateMix,
             scaleMix: data.scaleMix,
@@ -34,7 +34,7 @@ impl<'a> TransformConstraint<'a> {
         };
 
         for boneData in i.data.bones {
-            i.bones.push(skeleton.findBone(boneData.name))
+            i.bones.push(skeleton.findBone(&boneData.name))
         }
 
         return i;

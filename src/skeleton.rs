@@ -87,4 +87,12 @@ impl<'a> Skeleton<'a> {
 
         return i;
     }
+
+    pub fn findBone(boneName: &String) -> Option<&Bone> {
+        None
+    }
+
+    pub fn findSlot(slotName: &String) -> Option<&Slot> {
+        None
+    }
 }

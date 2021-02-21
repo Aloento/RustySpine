@@ -42,7 +42,7 @@ impl<'a> PathConstraint<'a> {
             curves: vec![],
             lengths: vec![],
             segments: vec![],
-            target: Some(skeleton.findSlot(data.target.unwrap().name)),
+            target: Some(skeleton.findSlot(&data.target.unwrap().name)),
             position: data.position,
             spacing: data.spacing,
             rotateMix: data.rotateMix,
@@ -52,7 +52,7 @@ impl<'a> PathConstraint<'a> {
         };
 
         for boneData in i.data.bones {
-            i.bones.push(skeleton.findBone(boneData.name));
+            i.bones.push(skeleton.findBone(&boneData.name));
         }
         
         return i;
