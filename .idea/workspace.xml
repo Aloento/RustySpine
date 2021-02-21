@@ -9,8 +9,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="TrackEntry">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="AnimationState">
       <change beforePath="$PROJECT_DIR$/src/animation_state.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/animation_state.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,14 +121,7 @@
       <workItem from="1613750790374" duration="7741000" />
       <workItem from="1613829047440" duration="54000" />
       <workItem from="1613829112224" duration="17854000" />
-      <workItem from="1613904850233" duration="6702000" />
-    </task>
-    <task id="LOCAL-00008" summary="Rust">
-      <created>1613396799715</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1613396799715</updated>
+      <workItem from="1613904850233" duration="7062000" />
     </task>
     <task id="LOCAL-00009" summary="Rust">
       <created>1613398661013</created>
@@ -467,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613911055668</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="AnimationState">
+      <created>1613911772365</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1613911772365</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +486,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rust" />
     <MESSAGE value="修正引用" />
     <MESSAGE value="Option可以代替NULL" />
     <MESSAGE value="SlotData" />
@@ -512,7 +510,8 @@
     <MESSAGE value="findBone" />
     <MESSAGE value="Animation" />
     <MESSAGE value="TrackEntry" />
-    <option name="LAST_COMMIT_MESSAGE" value="TrackEntry" />
+    <MESSAGE value="AnimationState" />
+    <option name="LAST_COMMIT_MESSAGE" value="AnimationState" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

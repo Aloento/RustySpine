@@ -36,7 +36,7 @@ impl<'a> AnimationState<'a> {
             propertyIDs: vec![],
             animationsChanged: false,
             data,
-            timeScale: 0.0,
+            timeScale: -1.0,
             unkeyedState: 0
         }
     }
@@ -109,6 +109,17 @@ impl TrackEntry {
             totalAlpha: 0.0,
             mixBlend: MixBlend::Replace
         }
+    }
+
+    pub fn reset(&mut self) {
+        self.next = None,
+        self.mixingFrom = None,
+        self.mixingTo = None,
+        self.animation = None,
+        self.listener = None,
+        self.timelineMode.clear();
+        self.timelineHoldMix.clear();
+        self.timelinesRotation.clear();
     }
 }
 
