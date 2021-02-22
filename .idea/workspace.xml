@@ -9,18 +9,15 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Event">
-      <change afterPath="$PROJECT_DIR$/src/attachments/texture_region.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/attachments/vertex_attachment.rs" afterDir="false" />
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="mesh">
+      <change afterPath="$PROJECT_DIR$/src/attachments/texture.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/bounding_box_attachment.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/bounding_box_attachment.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/clipping_attachment.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/clipping_attachment.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/mesh_attachment.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/mesh_attachment.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attachments/atlas_attachment_loader.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/atlas_attachment_loader.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/attachments/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/path_attachment.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/path_attachment.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/point_attachment.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/point_attachment.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/region_attachment.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/region_attachment.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/color.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/color.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attachments/texture_region.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/texture_region.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skeleton_binary.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_binary.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/texture_atlas.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/texture_atlas.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,12 +66,12 @@
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Codes\Rust\RustySpine\src\attachments" />
+    </key>
+  </component>
   <component name="RunManager" selected="Cargo.Test">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Test tests::it_works" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="test --package RustySpine --lib tests::it_works -- --exact" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -136,21 +133,11 @@
       <workItem from="1613750790374" duration="7741000" />
       <workItem from="1613829047440" duration="54000" />
       <workItem from="1613829112224" duration="17854000" />
-      <workItem from="1613904850233" duration="12425000" />
-    </task>
-    <task id="LOCAL-00012" summary="Rust">
-      <created>1613409364939</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1613409364939</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Rust">
-      <created>1613411033041</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1613411033041</updated>
+      <workItem from="1613904850233" duration="13762000" />
+      <workItem from="1613927379298" duration="42000" />
+      <workItem from="1613927431005" duration="14000" />
+      <workItem from="1614002504032" duration="17000" />
+      <workItem from="1614002531774" duration="1901000" />
     </task>
     <task id="LOCAL-00014" summary="Rust">
       <created>1613412048131</created>
@@ -481,7 +468,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613913369973</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Attachment">
+      <created>1613917537803</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1613917537803</updated>
+    </task>
+    <task id="LOCAL-00062" summary="mesh">
+      <created>1613917639990</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1613917639990</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,8 +502,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="SlotData" />
-    <MESSAGE value="EvenData" />
     <MESSAGE value="ConstraintData" />
     <MESSAGE value="SkeletonData" />
     <MESSAGE value="Key" />
@@ -526,7 +525,9 @@
     <MESSAGE value="TrackEntry" />
     <MESSAGE value="AnimationStateData" />
     <MESSAGE value="Event" />
-    <option name="LAST_COMMIT_MESSAGE" value="Event" />
+    <MESSAGE value="Attachment" />
+    <MESSAGE value="mesh" />
+    <option name="LAST_COMMIT_MESSAGE" value="mesh" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

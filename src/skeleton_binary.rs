@@ -2,7 +2,7 @@ use crate::attachments::atlas_attachment_loader::AtlasAttachmentLoader;
 use crate::attachments::attachment_loader::AttachmentLoader;
 use crate::utils::color::Color;
 use crate::utils::linked_mesh::LinkedMesh;
-use crate::utils::texture_atlas::TextureAtlas;
+use crate::attachments::texture_atlas::TextureAtlas;
 
 const BONE_ROTATE: u8 = 0;
 const BONE_TRANSLATE: u8 = 1;
