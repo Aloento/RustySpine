@@ -9,15 +9,12 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="mesh">
-      <change afterPath="$PROJECT_DIR$/src/attachments/texture.rs" afterDir="false" />
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="TextureAtlas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/atlas_attachment_loader.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/atlas_attachment_loader.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attachments/region_attachment.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/region_attachment.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attachments/texture.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/texture.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attachments/texture_atlas.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/texture_atlas.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/attachments/texture_region.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/texture_region.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skeleton_binary.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/skeleton_binary.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/texture_atlas.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/texture_atlas.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +99,11 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Cargo.Test tests::it_works" />
@@ -137,14 +139,7 @@
       <workItem from="1613927379298" duration="42000" />
       <workItem from="1613927431005" duration="14000" />
       <workItem from="1614002504032" duration="17000" />
-      <workItem from="1614002531774" duration="1901000" />
-    </task>
-    <task id="LOCAL-00014" summary="Rust">
-      <created>1613412048131</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1613412048131</updated>
+      <workItem from="1614002531774" duration="4781000" />
     </task>
     <task id="LOCAL-00015" summary="Rust">
       <created>1613413129831</created>
@@ -482,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613917639990</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="TextureAtlas">
+      <created>1614004645742</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1614004645743</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +504,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ConstraintData" />
     <MESSAGE value="SkeletonData" />
     <MESSAGE value="Key" />
     <MESSAGE value="add_attachment" />
@@ -527,7 +528,8 @@
     <MESSAGE value="Event" />
     <MESSAGE value="Attachment" />
     <MESSAGE value="mesh" />
-    <option name="LAST_COMMIT_MESSAGE" value="mesh" />
+    <MESSAGE value="TextureAtlas" />
+    <option name="LAST_COMMIT_MESSAGE" value="TextureAtlas" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

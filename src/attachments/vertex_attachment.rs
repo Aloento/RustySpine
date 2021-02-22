@@ -7,7 +7,7 @@ pub struct VertexAttachment<'a> {
     bones: Vec<i32>,
     vertices: Vec<f32>,
     worldVerticesLength: i32,
-    deformAttachment: &'a VertexAttachment<'a>,
+    deformAttachment: Option<&'a VertexAttachment<'a>>,
 }
 
 impl VertexAttachment {
@@ -19,9 +19,9 @@ impl VertexAttachment {
             bones: vec![],
             vertices: vec![],
             worldVerticesLength: 0,
-            deformAttachment: &VertexAttachment::new(name.clone()),
+            deformAttachment: None,
         };
-        i.deformAttachment = &i;
+        i.deformAttachment = Some(&i);
         i.id = (i.nextID & 65535) << 11;
         return i;
     }

@@ -5,8 +5,8 @@ use crate::attachments::mesh_attachment::MeshAttachment;
 use crate::attachments::path_attachment::PathAttachment;
 use crate::attachments::point_attachment::PointAttachment;
 use crate::attachments::region_attachment::RegionAttachment;
-use crate::skin::Skin;
 use crate::attachments::texture_atlas::TextureAtlas;
+use crate::skin::Skin;
 
 pub struct AtlasAttachmentLoader {
     atlas: TextureAtlas,

@@ -11,12 +11,12 @@ const URY: i32 = 5;
 const BRX: i32 = 6;
 const BRY: i32 = 7;
 
-pub struct RegionAttachment {
+pub struct RegionAttachment<'a> {
     Attachment: Attachment,
     uvs: Vec<f32>,
     offset: Vec<f32>,
     color: Color,
-    region: TextureRegion,
+    region: Option<&'a TextureRegion>,
     path: String,
     x: f32,
     y: f32,
@@ -27,14 +27,14 @@ pub struct RegionAttachment {
     height: f32,
 }
 
-impl RegionAttachment {
+impl<'a> RegionAttachment<'a> {
     pub fn new(name: String) -> Self {
         Self {
             Attachment: Attachment::new(name),
             uvs: Vec::with_capacity(8),
             offset: Vec::with_capacity(8),
             color: Color::new(),
-            region: TextureRegion {},
+            region: None,
             path: "".to_string(),
             x: 0.0,
             y: 0.0,
