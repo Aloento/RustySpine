@@ -9,12 +9,8 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="TextureAtlas">
+    <list default="true" id="5f3e004a-cf04-4845-82fd-2c3a98aa783a" name="默认的" comment="Texture">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/region_attachment.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/region_attachment.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/texture.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/texture.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/texture_atlas.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/texture_atlas.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attachments/texture_region.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/attachments/texture_region.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,11 +95,6 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Cargo.Test tests::it_works" />
@@ -139,21 +130,9 @@
       <workItem from="1613927379298" duration="42000" />
       <workItem from="1613927431005" duration="14000" />
       <workItem from="1614002504032" duration="17000" />
-      <workItem from="1614002531774" duration="4781000" />
-    </task>
-    <task id="LOCAL-00015" summary="Rust">
-      <created>1613413129831</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1613413129831</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Rust">
-      <created>1613414903413</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1613414903413</updated>
+      <workItem from="1614002531774" duration="5849000" />
+      <workItem from="1616095140064" duration="30000" />
+      <workItem from="1616095188211" duration="13000" />
     </task>
     <task id="LOCAL-00017" summary="Rust">
       <created>1613652177660</created>
@@ -484,7 +463,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614004645743</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Texture">
+      <created>1614007724313</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1614007724313</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Texture">
+      <created>1614007741735</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1614007741735</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +497,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="SkeletonData" />
     <MESSAGE value="Key" />
     <MESSAGE value="add_attachment" />
     <MESSAGE value="Skin" />
@@ -529,7 +521,8 @@
     <MESSAGE value="Attachment" />
     <MESSAGE value="mesh" />
     <MESSAGE value="TextureAtlas" />
-    <option name="LAST_COMMIT_MESSAGE" value="TextureAtlas" />
+    <MESSAGE value="Texture" />
+    <option name="LAST_COMMIT_MESSAGE" value="Texture" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
