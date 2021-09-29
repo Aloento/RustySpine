@@ -51,8 +51,10 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -132,6 +134,7 @@
       <workItem from="1616095140064" duration="30000" />
       <workItem from="1616095188211" duration="13000" />
       <workItem from="1616097682421" duration="55000" />
+      <workItem from="1619107926103" duration="8000" />
     </task>
     <task id="LOCAL-00018" summary="修正引用">
       <created>1613664278421</created>
